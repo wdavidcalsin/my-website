@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from '@mui/material';
 import CoffeeIcon from '@mui/icons-material/Coffee';
+import { Stack, Typography } from '@mui/material';
 
 const FootChild = () => {
   return (
