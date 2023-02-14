@@ -5,7 +5,17 @@ import { LayoutChild } from '../layout-child';
 
 const Layout = () => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: {
+          xs: 'column',
+          sm: 'column',
+          md: 'row',
+          lg: 'row',
+        },
+      }}
+    >
       <LayoutChild>
         <HomeContent />
       </LayoutChild>

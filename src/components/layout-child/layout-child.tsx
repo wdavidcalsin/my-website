@@ -8,8 +8,12 @@ const LayoutChild: React.FC<Props> = ({ children }) => {
   return (
     <Box
       sx={{
-        width: '50%',
-        flex: 1,
+        width: {
+          xs: '100%',
+          sm: '100%',
+          md: '50%',
+          lg: '50%',
+        },
         minHeight: '100vh',
         bgcolor: 'primary.main',
         display: 'flex',

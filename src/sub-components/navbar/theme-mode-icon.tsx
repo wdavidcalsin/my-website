@@ -12,16 +12,7 @@ const ThemeModeIcon = () => {
   const { mode, toggleColorMode } = useColorMode();
 
   return (
-    <Box
-      sx={{
-        marginRight: {
-          xs: '0',
-          sm: '0',
-          md: '2rem',
-          lg: '2rem',
-        },
-      }}
-    >
+    <Box>
       <IconButton
         aria-label="mode"
         component="label"

@@ -1,6 +1,6 @@
 import { navigationItems } from '@/constants';
 import { useStylesNavItem } from '@/styles';
-import { ThemeModeIcon } from '@/sub-components';
+import { MenuMobil, ThemeModeIcon } from '@/sub-components';
 import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
 import * as React from 'react';
 
@@ -30,7 +30,17 @@ const Navbar = () => {
         sx={{
           width: '20rem',
           bgcolor: 'primary.main',
+          flex: 1,
+          height: 'auto',
           color: 'secondary.contrastText',
+          alignItems: 'center',
+          alignContents: 'center',
+          display: {
+            xs: 'none',
+            sm: 'none',
+            md: 'block',
+            lg: 'block',
+          },
         }}
         value={value}
         onChange={handleChange}
@@ -43,11 +53,13 @@ const Navbar = () => {
               fontWeight: 'bold',
               textTransform: 'capitalize',
               borderRadius: '2rem',
+              paddingY: '.5rem',
             }}
             classes={{ root: classes.root }}
           />
         ))}
       </BottomNavigation>
+      <MenuMobil />
       <ThemeModeIcon />
     </Box>
   );
