@@ -5,8 +5,14 @@ const Aside = () => {
   return (
     <Box
       sx={{
-        flex: 1,
         bgcolor: 'primary.main',
+        width: {
+          xs: '100%',
+          sm: '100%',
+          md: '50%',
+          lg: '50%',
+        },
+        alignSelf: 'flex-end',
       }}
     >
       <Stack sx={{ paddingY: '4rem', paddingX: '3rem' }} spacing={2}>

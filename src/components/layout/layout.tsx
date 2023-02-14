@@ -14,6 +14,12 @@ const Layout = () => {
           md: 'row',
           lg: 'row',
         },
+        justifyContent: {
+          xs: 'normal',
+          sm: 'normal',
+          md: 'end',
+          lg: 'end',
+        },
       }}
     >
       <LayoutChild>
