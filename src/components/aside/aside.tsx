@@ -26,7 +26,7 @@ const Aside = () => {
             lg: '3rem',
           },
         }}
-        spacing={2}
+        spacing={5}
       >
         <ProjectsSection />
         <AboutSection />

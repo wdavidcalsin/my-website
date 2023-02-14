@@ -1,6 +1,24 @@
-import { Stack, Typography } from '@mui/material';
+import { technologyIcons } from '@/constants';
+import { notionTechnologiesService } from '@/services';
+import { INotionServiceTechnologies } from '@/types';
+import { Box, Grid, Stack, Typography } from '@mui/material';
+import * as React from 'react';
 
 const AboutSection = () => {
+  const [listTechnology, setListTechnology] = React.useState<
+    INotionServiceTechnologies[]
+  >([]);
+
+  React.useEffect(() => {
+    const fetchDataTechnology = async () => {
+      const resultNotionTechnology = await notionTechnologiesService();
+
+      setListTechnology(resultNotionTechnology);
+    };
+
+    fetchDataTechnology();
+  }, []);
+
   return (
     <Stack spacing={1}>
       <Stack spacing={1}>
@@ -34,6 +52,36 @@ const AboutSection = () => {
         >
           Technologies i currently work with:
         </Typography>
+        <Grid container sx={{ gap: 2 }}>
+          {listTechnology.map((technology) => {
+            return (
+              <Grid item>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                    padding: '1rem',
+                  }}
+                >
+                  {technologyIcons(technology.slug)}
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'secondary.contrastText',
+                      fontWeight: 'bold',
+                      fontSize: '.6rem',
+                    }}
+                  >
+                    {technology.name}
+                  </Typography>
+                </Box>
+              </Grid>
+            );
+          })}
+        </Grid>
       </Stack>
     </Stack>
   );

@@ -1,7 +1,7 @@
-import { useColorMode } from '@/context';
-import { Box, IconButton, Fade, Zoom } from '@mui/material';
+import { useColorMode } from '@/hooks';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import { Box, Fade, IconButton, Zoom } from '@mui/material';
 
 const iconStyle = {
   color: 'secondary.contrastText',

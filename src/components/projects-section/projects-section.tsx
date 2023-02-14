@@ -10,11 +10,13 @@ import {
   timelineItemClasses,
   TimelineSeparator,
 } from '@mui/lab';
-import { INotionService } from '@/types';
+import { INotionServiceProjects } from '@/types';
 import { notionProjectService } from '@/services';
 
 const ProjectsSection = () => {
-  const [listProject, setListProject] = React.useState<INotionService[]>([]);
+  const [listProject, setListProject] = React.useState<
+    INotionServiceProjects[]
+  >([]);
 
   React.useEffect(() => {
     const fetchData = async () => {
