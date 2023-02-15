@@ -5,6 +5,7 @@ const TalkToMeSection = () => {
   return (
     <Stack spacing={2}>
       <Typography
+        id="contact"
         sx={{
           fontWeight: 'bold',
           fontSize: '1.5rem',

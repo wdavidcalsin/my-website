@@ -5,6 +5,7 @@ const ProjectsSection = () => {
   return (
     <Stack spacing={2}>
       <Typography
+        id="projects"
         sx={{
           fontWeight: 'bold',
           fontSize: '1.5rem',
