@@ -1,6 +1,8 @@
 import { notionProjectService } from '@/services';
 import { INotionServiceProjects } from '@/types';
 import FaceIcon from '@mui/icons-material/Face';
+import LanguageIcon from '@mui/icons-material/Language';
+import CodeIcon from '@mui/icons-material/Code';
 import {
   Timeline,
   TimelineConnector,
@@ -91,7 +93,7 @@ const ProjectItem = () => {
                   component="a"
                   href={itemProject.site}
                   target="_blank"
-                  icon={<FaceIcon />}
+                  icon={<LanguageIcon />}
                   label="Site"
                   sx={{ cursor: 'pointer' }}
                 />
@@ -99,7 +101,7 @@ const ProjectItem = () => {
                   component="a"
                   href={itemProject.link_code}
                   target="_blank"
-                  icon={<FaceIcon />}
+                  icon={<CodeIcon />}
                   label="Code"
                   variant="outlined"
                   sx={{ cursor: 'pointer' }}
