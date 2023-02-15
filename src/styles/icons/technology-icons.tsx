@@ -1,9 +1,5 @@
-import { IIconsPropsMakeStyles } from '@/types';
-import { makeStyles } from '@mui/styles';
+import styled from 'styled-components';
 
-export const useStyledTechnologyIcons = makeStyles({
-  root: {
-    color: (props: IIconsPropsMakeStyles) => props.color,
-    fontSize: '2rem',
-  },
-});
+export const StyledTechnologyIcons = styled.i`
+  color: ${(props) => props.color};
+`;

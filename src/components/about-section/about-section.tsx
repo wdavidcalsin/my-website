@@ -1,5 +1,5 @@
-import { technologyIcons } from '@/constants';
 import { notionTechnologiesService } from '@/services';
+import { IconsTechnologiesSubComponents } from '@/sub-components/icons';
 import { INotionServiceTechnologies } from '@/types';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import * as React from 'react';
@@ -53,9 +53,9 @@ const AboutSection = () => {
           Technologies i currently work with:
         </Typography>
         <Grid container sx={{ gap: 2 }}>
-          {listTechnology.map((technology) => {
+          {listTechnology.map((technology, index) => {
             return (
-              <Grid item>
+              <Grid item key={index}>
                 <Box
                   sx={{
                     display: 'flex',
@@ -66,7 +66,7 @@ const AboutSection = () => {
                     padding: '1rem',
                   }}
                 >
-                  {technologyIcons(technology.slug)}
+                  <IconsTechnologiesSubComponents name={technology.slug} />
                   <Typography
                     variant="body2"
                     sx={{
