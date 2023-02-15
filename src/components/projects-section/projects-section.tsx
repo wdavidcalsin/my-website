@@ -47,8 +47,8 @@ const ProjectsSection = () => {
           },
         }}
       >
-        {listProject.map((itemProject) => (
-          <TimelineItem>
+        {listProject.map((itemProject, index) => (
+          <TimelineItem key={index}>
             <TimelineSeparator>
               <TimelineDot />
               <TimelineConnector />

@@ -13,10 +13,12 @@ import {
   SiRedux,
   SiTailwindcss,
   SiTypescript,
+  SiHtml5,
 } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
 
 export const IconList: IIconList = {
+  html: { icon: SiHtml5, color: '#D84924' },
   css: { icon: DiCss3, color: '#1D88C7' },
   javascript: { icon: SiJavascript, color: '#EAD41C' },
   'react.js': { icon: SiReact, color: '#61DBFB' },
