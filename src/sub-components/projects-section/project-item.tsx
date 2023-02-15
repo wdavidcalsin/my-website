@@ -1,8 +1,7 @@
 import { notionProjectService } from '@/services';
 import { INotionServiceProjects } from '@/types';
-import FaceIcon from '@mui/icons-material/Face';
-import LanguageIcon from '@mui/icons-material/Language';
 import CodeIcon from '@mui/icons-material/Code';
+import LanguageIcon from '@mui/icons-material/Language';
 import {
   Timeline,
   TimelineConnector,
