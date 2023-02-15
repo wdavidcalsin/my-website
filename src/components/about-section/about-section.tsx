@@ -33,12 +33,12 @@ const AboutSection = () => {
           about
         </Typography>
         <Typography variant="body1" sx={{ color: 'secondary.contrastText' }}>
-          Unleashing the power of code to solve problems and make a difference -
-          that's what drives me. My name is Favour Faiyetole and I am a
-          passionate FullStack developer with a love for open-source and a knack
-          for creating content on Instagram. When I'm not coding, you can catch
-          me playing some epic video games, indulging in animated movies, or
-          binging on the latest Korean thrillers.
+          As a FullStack developer, I enjoy using my programming skills to
+          create innovative and useful solutions that solve problems and make a
+          difference. My name is Willian David and, when I'm not programming, I
+          find myself learning guitar, exploring new technologies, and
+          participating in programming communities to continually improve my
+          skills and knowledge.
         </Typography>
       </Stack>
       <Stack spacing={1}>
