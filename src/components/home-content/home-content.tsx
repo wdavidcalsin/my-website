@@ -1,10 +1,6 @@
 import { Avatar, Box, Chip, Stack, Typography } from '@mui/material';
 
 const HomeContent = () => {
-  const handleClick = () => {
-    console.info('You clicked the Chip.');
-  };
-
   return (
     <Box sx={{ height: '100%', paddingX: '2rem' }}>
       <Stack
@@ -42,21 +38,27 @@ const HomeContent = () => {
         </Typography>
         <Stack direction="row" spacing={1}>
           <Chip
+            component="a"
+            href="https://github.com/wdavidcalsin"
+            target="_blank"
             label="Github"
-            onClick={handleClick}
-            sx={{ color: '#2D3748', bgcolor: '#CBD5E0' }}
+            sx={{ color: '#2D3748', bgcolor: '#CBD5E0', cursor: 'pointer' }}
           />
           <Chip
+            component="a"
+            href="https://twitter.com/wdavidcalsin"
+            target="_blank"
             label="Twitter"
             variant="outlined"
-            onClick={handleClick}
-            sx={{ color: '#2C5282', bgcolor: '#90CDF4' }}
+            sx={{ color: '#2C5282', bgcolor: '#90CDF4', cursor: 'pointer' }}
           />
           <Chip
+            component="a"
+            href="https://linkedin.com/in/williandavidcalsin/"
+            target="_blank"
             label="Linkedin"
             variant="outlined"
-            onClick={handleClick}
-            sx={{ color: '#2C5282', bgcolor: '#90CDF4' }}
+            sx={{ color: '#2C5282', bgcolor: '#90CDF4', cursor: 'pointer' }}
           />
         </Stack>
       </Stack>
