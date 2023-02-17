@@ -21,7 +21,13 @@ const Navbar = () => {
         alignItems: 'center',
         alignContent: 'center',
         bgcolor: 'primary.main',
-        paddingX: '2rem',
+        paddingLeft: '2rem',
+        paddingRight: {
+          xs: '2rem',
+          sm: '2rem',
+          md: 0,
+          lg: 0,
+        },
         height: '5rem',
       }}
     >
@@ -47,15 +53,9 @@ const Navbar = () => {
       >
         {navigationItems.map((item, index) => (
           <BottomNavigationAction
-            label={<Box sx={{ fontSize: '.99rem' }}>{item.name}</Box>}
-            onClick={() => {
-              const element = document.querySelector(`#${item.slug}`);
-              if (element) {
-                element.scrollIntoView({
-                  behavior: 'smooth',
-                });
-              }
-            }}
+            label={<Box sx={{ fontSize: '1.1rem' }}>{item.name}</Box>}
+            LinkComponent="a"
+            href={`#${item.slug}`}
             key={index}
             sx={{
               fontWeight: 'bold',

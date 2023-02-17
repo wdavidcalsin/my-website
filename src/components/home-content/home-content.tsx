@@ -1,3 +1,4 @@
+import { AnimatedGradientText } from '@/styles';
 import { Avatar, Box, Chip, Stack, Typography } from '@mui/material';
 
 const HomeContent = () => {
@@ -16,16 +17,20 @@ const HomeContent = () => {
           src="./avatar-img.jpg"
           sx={{ width: '5rem', height: '5rem' }}
         />
-        <Typography
+        <AnimatedGradientText
           variant="h1"
           sx={{
             fontWeight: 'bold',
-            fontSize: '2rem',
+            fontSize: {
+              xs: '2rem',
+              sm: '2.5rem',
+              md: '2.5rem',
+            },
             color: 'secondary.contrastText',
           }}
         >
           Hey, I'm Willian David!
-        </Typography>
+        </AnimatedGradientText>
         <Typography
           variant="body1"
           sx={{
