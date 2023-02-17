@@ -23,6 +23,7 @@ const AboutSection = () => {
     <Stack spacing={1}>
       <Stack spacing={1}>
         <Typography
+          id="about"
           sx={{
             fontWeight: 'bold',
             fontSize: '1.5rem',
