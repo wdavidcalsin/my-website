@@ -48,14 +48,8 @@ const Navbar = () => {
         {navigationItems.map((item, index) => (
           <BottomNavigationAction
             label={<Box sx={{ fontSize: '.99rem' }}>{item.name}</Box>}
-            onClick={() => {
-              const element = document.querySelector(`#${item.slug}`);
-              if (element) {
-                element.scrollIntoView({
-                  behavior: 'smooth',
-                });
-              }
-            }}
+            LinkComponent="a"
+            href={`#${item.slug}`}
             key={index}
             sx={{
               fontWeight: 'bold',

@@ -1,5 +1,5 @@
 import { notionTechnologiesService } from '@/services';
-import { IconsTechnologiesSubComponents } from '@/sub-components/icons';
+import { IconsTechnologiesSubComponents } from '@/sub-components';
 import { INotionServiceTechnologies } from '@/types';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import * as React from 'react';

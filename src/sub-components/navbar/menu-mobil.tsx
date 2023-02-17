@@ -1,4 +1,6 @@
-import * as React from 'react';
+import { navigationItems } from '@/constants';
+import { useMenuDrawer } from '@/hooks';
+import { HamburgerMenu } from '@/styles';
 import {
   Box,
   Button,
@@ -9,68 +11,59 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const MenuMobil = () => {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
+  const [isOpen, toggleDrawer, handleDrawerClose] = useMenuDrawer();
 
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return;
-      }
-
-      setState({ ...state, [anchor]: open });
-    };
-
-  const list = (anchor: Anchor) => (
+  const list = () => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: 250, bgcolor: 'primary.main', height: '100%' }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer}
+      onKeyDown={handleDrawerClose}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <Typography
+        sx={{
+          textAlign: 'center',
+          textTransform: 'uppercase',
+          paddingY: '1.2rem',
+          fontWeight: 'bold',
+          fontSize: '1.3rem',
+          color: 'secondary.contrastText',
+        }}
+      >
+        menu
+      </Typography>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {navigationItems.map((item, index) => (
+          <>
+            <ListItem key={`${index * 100}`} disablePadding>
+              <ListItemButton LinkComponent="a" href={`#${item.slug}`}>
+                <ListItemIcon>
+                  <item.icon sx={{ color: 'secondary.contrastText' }} />
+                </ListItemIcon>
+                <ListItemText
+                  sx={{
+                    textTransform: 'capitalize',
+                    color: 'secondary.contrastText',
+                    '& span': {
+                      fontSize: '1.2rem',
+                      fontWeight: 'bold',
+                    },
+                  }}
+                  primary={item.name}
+                />
+              </ListItemButton>
+            </ListItem>
+          </>
         ))}
       </List>
     </Box>
   );
+
   return (
     <Box
       sx={{
@@ -83,19 +76,16 @@ const MenuMobil = () => {
       }}
     >
       <Button
-        onClick={toggleDrawer('left', true)}
+        onClick={toggleDrawer}
         sx={{
           color: 'secondary.contrastText',
+          height: '2.6rem',
         }}
       >
-        Menu
+        <HamburgerMenu clicked={isOpen}>&nbsp;</HamburgerMenu>
       </Button>
-      <Drawer
-        anchor={'left'}
-        open={state['left']}
-        onClose={toggleDrawer('left', false)}
-      >
-        {list('left')}
+      <Drawer anchor={'left'} open={isOpen} onClose={handleDrawerClose}>
+        {list()}
       </Drawer>
     </Box>
   );
