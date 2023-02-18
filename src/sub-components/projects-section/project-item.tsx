@@ -82,7 +82,7 @@ const ProjectItem = () => {
               <Box>
                 <Typography
                   variant="body1"
-                  sx={{ color: 'secondary.contrastText' }}
+                  sx={{ color: 'secondary.contrastText', lineHeight: 1.8 }}
                 >
                   {itemProject.description}
                 </Typography>

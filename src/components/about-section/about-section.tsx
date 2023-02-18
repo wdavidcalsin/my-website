@@ -33,7 +33,15 @@ const AboutSection = () => {
         >
           about
         </Typography>
-        <Typography variant="body1" sx={{ color: 'secondary.contrastText' }}>
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: '1.03rem',
+            color: 'secondary.contrastText',
+            letterSpacing: '.02rem',
+            lineHeight: 1.9,
+          }}
+        >
           As a FullStack developer, I enjoy using my programming skills to
           create innovative and useful solutions that solve problems and make a
           difference. My name is Willian David and, when I'm not programming, I
@@ -49,11 +57,12 @@ const AboutSection = () => {
             fontWeight: 'bold',
             fontSize: '1.1rem',
             color: 'secondary.contrastText',
+            lineHeight: 1.8,
           }}
         >
           Technologies i currently work with:
         </Typography>
-        <Grid container sx={{ gap: 2 }}>
+        <Grid container sx={{ gap: 1 }}>
           {listTechnology.map((technology, index) => {
             return (
               <Grid item key={index}>
@@ -72,8 +81,8 @@ const AboutSection = () => {
                     variant="body2"
                     sx={{
                       color: 'secondary.contrastText',
-                      fontWeight: 'bold',
-                      fontSize: '.6rem',
+                      paddingTop: '.2rem',
+                      fontSize: '.8rem',
                     }}
                   >
                     {technology.name}
