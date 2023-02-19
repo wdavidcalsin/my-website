@@ -1,5 +1,5 @@
-import { FormToTalkToMe } from '@/sub-components';
-import { Stack, Typography } from '@mui/material';
+import { UlContactItems } from '@/styles';
+import { Link, Stack, Typography } from '@mui/material';
 
 const TalkToMeSection = () => {
   return (
@@ -13,18 +13,46 @@ const TalkToMeSection = () => {
           color: 'secondary.contrastText',
         }}
       >
-        Talk to me
+        Contact
       </Typography>
       <Stack spacing={0.5}>
         <Typography variant="body1" sx={{ color: 'secondary.contrastText' }}>
-          Do you have a project for me or a job?
-          <br />
-          feel free to contact me by filling the form below
+          You can contact me by email at
+          <i> david2c142 at gmail.com</i>
         </Typography>
       </Stack>
-      <Stack>
-        <FormToTalkToMe />
-      </Stack>
+      <UlContactItems>
+        <li>
+          Linkedin:{' '}
+          <Link
+            sx={{ color: 'custom.text2' }}
+            href="https://www.linkedin.com/in/williandavidcalsin/"
+            target="_blank"
+          >
+            @wdavidcalsin
+          </Link>
+        </li>
+        <li>
+          Github:{' '}
+          <Link
+            sx={{ color: 'custom.text2' }}
+            href="https://github.com/wdavidcalsin"
+            target="_blank"
+          >
+            @wdavidcalsin
+          </Link>
+        </li>
+        <li>
+          Twitter:{' '}
+          <Link
+            sx={{ color: 'custom.text2' }}
+            href="https://twitter.com/wdavidcalsin"
+            target="_blank"
+          >
+            @wdavidcalsin
+          </Link>
+        </li>
+      </UlContactItems>
     </Stack>
   );
 };

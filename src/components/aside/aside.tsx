@@ -14,6 +14,7 @@ const Aside = () => {
           md: '50%',
           lg: '50%',
         },
+        minHeight: '100vh',
       }}
     >
       <Stack
