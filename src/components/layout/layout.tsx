@@ -1,32 +1,20 @@
-import { Box } from '@mui/material';
-import { Aside } from '../aside';
-import { HomeContent } from '../home-content';
-import { LayoutChild } from '../layout-child';
+import { DashBackground, GradientBackground } from "@/sub-components";
+import { Box } from "@chakra-ui/react";
+import * as React from "react";
+import { Navbar } from "../navbar";
 
-const Layout = () => {
+interface IPropsLayout {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: IPropsLayout) => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: {
-          xs: 'column',
-          sm: 'column',
-          md: 'row',
-          lg: 'row',
-        },
-        justifyContent: {
-          xs: 'normal',
-          sm: 'normal',
-          md: 'end',
-          lg: 'end',
-        },
-      }}
-    >
-      <LayoutChild>
-        <HomeContent />
-      </LayoutChild>
-      <Aside />
-    </Box>
+    <>
+      <DashBackground />
+      <Navbar />
+      <Box>{children}</Box>
+      <GradientBackground />
+    </>
   );
 };
 

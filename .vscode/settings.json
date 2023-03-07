@@ -1,0 +1,12 @@
+{
+  "exportall.config.folderListener": ["/src/components/layout"],
+  "exportall.config.relExclusion": ["/src/components/layout"],
+  "cSpell.words": [
+    "Chakra",
+    "Hubo",
+    "hubot",
+    "pedroduarteisalegend",
+    "svgviewer",
+    "Wdavid"
+  ]
+}

@@ -1,75 +1,33 @@
-import { navigationItems } from '@/constants';
-import { useStylesNavItem } from '@/styles';
-import { MenuMobil, ThemeModeIcon } from '@/sub-components';
-import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
-import * as React from 'react';
+import { LogoIconWdavid } from "@/sub-components";
+import { Box, Container, Link } from "@chakra-ui/react";
 
 const Navbar = () => {
-  const [value, setValue] = React.useState('recents');
-
-  const classes = useStylesNavItem();
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
-
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        alignContent: 'center',
-        bgcolor: 'primary.main',
-        paddingLeft: '2rem',
-        paddingRight: {
-          xs: '2rem',
-          sm: '2rem',
-          md: 0,
-          lg: 0,
-        },
-        height: '5rem',
-      }}
+    <Container
+      maxW="container.sm"
+      height={"4rem"}
+      bgColor={"hsla(0,0%,100%,.03)"}
+      display="grid"
+      placeItems={"center"}
+      borderRadius="1rem"
     >
-      <BottomNavigation
-        showLabels
-        sx={{
-          width: '20rem',
-          bgcolor: 'primary.main',
-          flex: 1,
-          height: 'auto',
-          color: 'secondary.contrastText',
-          alignItems: 'center',
-          alignContents: 'center',
-          display: {
-            xs: 'none',
-            sm: 'none',
-            md: 'block',
-            lg: 'block',
-          },
-        }}
-        value={value}
-        onChange={handleChange}
+      <Box
+        display={"flex"}
+        justifyContent={"space-between"}
+        alignContent="center"
+        alignItems={"center"}
+        width="100%"
       >
-        {navigationItems.map((item, index) => (
-          <BottomNavigationAction
-            label={<Box sx={{ fontSize: '1.1rem' }}>{item.name}</Box>}
-            LinkComponent="a"
-            href={`#${item.slug}`}
-            key={index}
-            sx={{
-              fontWeight: 'bold',
-              textTransform: 'capitalize',
-              borderRadius: '2rem',
-              paddingY: '.5rem',
-            }}
-            classes={{ root: classes.root }}
-          />
-        ))}
-      </BottomNavigation>
-      <MenuMobil />
-      <ThemeModeIcon />
-    </Box>
+        <Box width={"3rem"}>
+          <LogoIconWdavid />
+        </Box>
+        <Box display={"flex"} gap="1rem">
+          <Link href={"/"}>Projects</Link>
+          <Link href={"/"}>About</Link>
+          <Link href={"/"}>Contact</Link>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
