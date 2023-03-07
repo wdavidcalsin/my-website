@@ -1,5 +1,6 @@
+import { HomeContent } from "@/components";
 import styles from "@/styles/Home.module.css";
-import { Text } from "@chakra-ui/react";
+import { Container, Text } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Text>Hello word</Text>
+        <Container maxW="container.sm" paddingTop={"12rem"}>
+          <HomeContent />
+        </Container>
       </main>
     </>
   );
