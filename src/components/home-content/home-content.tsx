@@ -44,7 +44,7 @@ const HomeContent = () => {
           </Text>
         </Box>
       </Box>
-      <Text fontSize={"1.35rem"} lineHeight={"1.75rem"} height="50rem">
+      <Text fontSize={"1.35rem"} lineHeight={"1.75rem"}>
         Welcome to my digital garden where I share what I am learning about
         shipping great products, becoming a better developer and growing a
         career in tech.

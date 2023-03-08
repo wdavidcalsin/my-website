@@ -3,6 +3,7 @@
   "exportall.config.relExclusion": ["/src/components/layout"],
   "cSpell.words": [
     "Chakra",
+    "Cloudinary",
     "headlessui",
     "Hubo",
     "hubot",
