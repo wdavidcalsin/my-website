@@ -1,9 +1,9 @@
 import { HomeContent, Projects } from "@/components";
 import { useStoreShowNavbar } from "@/store";
-import styles from "@/styles/Home.module.css";
-import { Container, Text } from "@chakra-ui/react";
+import { MainContainer } from "@/sub-components";
 import Head from "next/head";
 import { useEffect } from "react";
+import {} from "zustand";
 
 export default function Home() {
   const { setIsTransitionTrue } = useStoreShowNavbar((state) => state);
@@ -20,10 +20,10 @@ export default function Home() {
         <link rel="icon" href="/image/logo-icon-wdavid.svg" />
       </Head>
       <main>
-        <Container maxW="container.sm" paddingTop={"12rem"}>
+        <MainContainer paddingTop={"12rem"}>
           <HomeContent />
           <Projects />
-        </Container>
+        </MainContainer>
       </main>
     </>
   );

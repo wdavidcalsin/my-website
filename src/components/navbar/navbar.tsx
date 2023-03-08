@@ -1,6 +1,6 @@
 import { useStoreShowNavbar } from "@/store";
-import { LogoIconWdavid } from "@/sub-components";
-import { Box, Collapse, Container, Link, useColorMode } from "@chakra-ui/react";
+import { LogoIconWdavid, MainContainer } from "@/sub-components";
+import { Box, Collapse, Link, useColorMode } from "@chakra-ui/react";
 import * as React from "react";
 import { BsSunFill } from "react-icons/bs";
 import { useWindowScroll } from "react-use";
@@ -38,21 +38,18 @@ const Navbar = () => {
         style={{ pointerEvents: "auto", backdropFilter: "blur" }}
         in={isShowNav}
       >
-        <Container
-          maxW="container.sm"
-          height={"4rem"}
-          bgColor={"hsla(0,0%,100%,.08)"}
-          display="grid"
-          placeItems={"center"}
-          borderRadius="1rem"
-          boxShadow="md"
-        >
+        <MainContainer>
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignContent="center"
             alignItems={"center"}
             width="100%"
+            height={"4rem"}
+            bgColor={"hsla(0,0%,100%,.08)"}
+            borderRadius=".7rem"
+            boxShadow="md"
+            paddingX={"1rem"}
           >
             <Box width={"4rem"}>
               <LogoIconWdavid />
@@ -81,7 +78,7 @@ const Navbar = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
+        </MainContainer>
       </Collapse>
     </Box>
   );

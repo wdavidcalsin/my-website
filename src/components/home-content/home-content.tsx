@@ -5,7 +5,7 @@ import { FaCode } from "react-icons/fa";
 
 const HomeContent = () => {
   return (
-    <Stack spacing={"2.8rem"}>
+    <Stack spacing={"2.8rem"} paddingX="0">
       <Box
         display={"flex"}
         alignContent={"center"}

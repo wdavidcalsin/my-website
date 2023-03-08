@@ -9,12 +9,12 @@ interface IPropsLayout {
 
 const Layout = ({ children }: IPropsLayout) => {
   return (
-    <>
+    <Box minHeight={"100vh"}>
       <DashBackground />
       <Navbar />
       <Box>{children}</Box>
       <GradientBackground />
-    </>
+    </Box>
   );
 };
 

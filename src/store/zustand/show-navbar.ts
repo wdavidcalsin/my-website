@@ -9,11 +9,9 @@ interface IStoreShowNavbar {
 export const useStoreShowNavbar = create<IStoreShowNavbar>((set) => ({
   isTransition: true,
   setIsTransitionTrue: () => {
-    console.log("setIsTransitionTrue is run...");
     set({ isTransition: true });
   },
   setIsTransitionFalse: () => {
-    console.log("setIsTransitionFalse");
     set({ isTransition: false });
   },
 }));
