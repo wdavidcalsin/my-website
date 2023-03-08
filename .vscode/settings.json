@@ -3,11 +3,13 @@
   "exportall.config.relExclusion": ["/src/components/layout"],
   "cSpell.words": [
     "Chakra",
+    "headlessui",
     "Hubo",
     "hubot",
     "pedroduarteisalegend",
     "svgviewer",
     "Wdavid",
-    "Willian"
+    "Willian",
+    "zustand"
   ]
 }

@@ -1,7 +1,7 @@
 import { Social } from "@/sub-components";
-import { Box, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import { FaCode, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 
 const HomeContent = () => {
   return (
@@ -44,7 +44,7 @@ const HomeContent = () => {
           </Text>
         </Box>
       </Box>
-      <Text fontSize={"1.35rem"} lineHeight={"1.75rem"}>
+      <Text fontSize={"1.35rem"} lineHeight={"1.75rem"} height="50rem">
         Welcome to my digital garden where I share what I am learning about
         shipping great products, becoming a better developer and growing a
         career in tech.

@@ -22,7 +22,6 @@ const GradientBackground = () => {
         }
         bgSize="cover"
         style={{
-          willChange: "transform",
           transform: `translateY(${Math.min(y / 3, 167)}px)`,
         }}
       ></Box>

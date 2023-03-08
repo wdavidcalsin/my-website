@@ -1,9 +1,16 @@
 import { HomeContent } from "@/components";
+import { useStoreShowNavbar } from "@/store";
 import styles from "@/styles/Home.module.css";
 import { Container, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export default function Home() {
+  const { setIsTransitionTrue } = useStoreShowNavbar((state) => state);
+  useEffect(() => {
+    setIsTransitionTrue();
+  }, []);
+
   return (
     <>
       <Head>
