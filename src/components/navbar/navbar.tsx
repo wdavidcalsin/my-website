@@ -1,6 +1,7 @@
 import { useStoreShowNavbar } from "@/store";
 import { LogoIconWdavid, MainContainer } from "@/sub-components";
 import { Box, Collapse, Link, useColorMode } from "@chakra-ui/react";
+import LinkNext from "next/link";
 import * as React from "react";
 import { BsSunFill } from "react-icons/bs";
 import { useWindowScroll } from "react-use";
@@ -15,7 +16,7 @@ const Navbar = () => {
   const { y } = useWindowScroll();
 
   const handleScrollNavbar = React.useCallback(() => {
-    if (y > 300) {
+    if (y > 250) {
       setIsShowNav(true);
     } else {
       setIsShowNav(false);
@@ -61,8 +62,12 @@ const Navbar = () => {
                 fontWeight={"extrabold"}
                 fontSize="1.1rem"
               >
-                <Link href={"/"}>Projects</Link>
-                <Link href={"/"}>About</Link>
+                <Link as={LinkNext} href={"/"}>
+                  Projects
+                </Link>
+                <Link as={LinkNext} href={"/about"}>
+                  About
+                </Link>
                 <Link href={"/"}>Contact</Link>
               </Box>
               <Box

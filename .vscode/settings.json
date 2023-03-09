@@ -2,6 +2,7 @@
   "exportall.config.folderListener": ["/src/components/layout"],
   "exportall.config.relExclusion": ["/src/components/layout"],
   "cSpell.words": [
+    "Calsin",
     "Chakra",
     "Cloudinary",
     "headlessui",
