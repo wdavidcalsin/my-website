@@ -16,7 +16,7 @@ const ContactContent = () => {
   const { setIsTransitionFalse } = useStoreShowNavbar((state) => state);
   React.useEffect(() => {
     setIsTransitionFalse();
-  }, []);
+  }, [setIsTransitionFalse]);
 
   return (
     <Stack>
