@@ -1,8 +1,5 @@
-import { Box, Divider, Heading, Link, Stack, Text } from "@chakra-ui/react";
-import { TbBrandTypescript } from "react-icons/tb";
-import { DiJavascript1 } from "react-icons/di";
-import { SiTypescript, SiReact, SiJavascript } from "react-icons/si";
-import * as React from "react";
+import { Box, Divider, Heading, Stack, Text } from "@chakra-ui/react";
+import { SiJavascript, SiReact, SiTypescript } from "react-icons/si";
 
 const Technologies = () => {
   return (

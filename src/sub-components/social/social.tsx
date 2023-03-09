@@ -22,7 +22,7 @@ const Social = () => {
         }}
       >
         <Box
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgGradient="linear(to-l, #000000, #1F1F1F)"
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"
@@ -50,7 +50,7 @@ const Social = () => {
         }}
       >
         <Box
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgGradient="linear(to-l, #004F78, #0077B5 )"
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"
@@ -77,7 +77,7 @@ const Social = () => {
         }}
       >
         <Box
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgGradient="linear(to-l, #1D6CF2, #1DA1F2)"
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"

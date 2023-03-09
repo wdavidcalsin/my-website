@@ -17,7 +17,7 @@ const HomeContent = () => {
           height={"5rem"}
           borderWidth="3px"
           borderColor="hsl(240,80%,60%)"
-          bgGradient="linear(to-l, #7928CA, #CC6A8A)"
+          bgGradient="linear(to-l, #0633AA, #094DFF)"
           borderRadius={"50%"}
           overflow="hidden"
           display={"grid"}

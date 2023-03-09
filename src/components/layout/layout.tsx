@@ -10,7 +10,7 @@ interface IPropsLayout {
 
 const Layout = ({ children }: IPropsLayout) => {
   return (
-    <Box minHeight={"100vh"}>
+    <Box minHeight={"100vh"} bg="transparent">
       <DashBackground />
       <Navbar />
       <Box>{children}</Box>

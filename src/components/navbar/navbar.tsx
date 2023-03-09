@@ -51,6 +51,7 @@ const Navbar = () => {
             borderRadius=".7rem"
             boxShadow="md"
             paddingX={"1rem"}
+            backdropFilter="blur(5px)"
           >
             <Link as={LinkNext} href="/" width={"4rem"}>
               <LogoIconWdavid />
@@ -72,7 +73,7 @@ const Navbar = () => {
                   Contact
                 </Link>
               </Box>
-              <Box
+              {/* <Box
                 fontSize={"1.7rem"}
                 transition="all .2s"
                 cursor={"pointer"}
@@ -82,7 +83,7 @@ const Navbar = () => {
                 onClick={toggleColorMode}
               >
                 <BsSunFill />
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         </MainContainer>
