@@ -1,6 +1,6 @@
 import { HomeContent, Projects } from "@/components";
 import { useStoreShowNavbar } from "@/store";
-import { MainContainer } from "@/sub-components";
+import { MainContainer, ViewAllProjects } from "@/sub-components";
 import Head from "next/head";
 import { useEffect } from "react";
 import {} from "zustand";
@@ -22,7 +22,8 @@ export default function Home() {
       <main>
         <MainContainer paddingTop={"12rem"}>
           <HomeContent />
-          <Projects />
+          <Projects projectType="best" />
+          <ViewAllProjects />
         </MainContainer>
       </main>
     </>

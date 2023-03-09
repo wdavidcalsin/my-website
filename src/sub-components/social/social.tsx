@@ -3,7 +3,13 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Social = () => {
   return (
-    <Box display={"flex"} gap="2rem" fontSize={"1rem"} fontWeight="bold">
+    <Box
+      display={"flex"}
+      gap="2rem"
+      fontSize={"1rem"}
+      fontWeight="bold"
+      flexWrap={"wrap"}
+    >
       <Link
         href={"/"}
         display={"flex"}
@@ -22,6 +28,7 @@ const Social = () => {
           borderRadius=".5rem"
           fontSize={"1.4rem"}
           transition="all .3s"
+          color="white"
           _hover={{
             transform: "scale(1.1)",
             boxShadow: "outline",
@@ -48,6 +55,7 @@ const Social = () => {
           padding={".3rem"}
           borderRadius=".5rem"
           transition="all .3s"
+          color="white"
           _hover={{
             transform: "scale(1.1)",
             boxShadow: "outline",
@@ -74,6 +82,7 @@ const Social = () => {
           padding={".3rem"}
           borderRadius=".5rem"
           transition="all .3s"
+          color="white"
           _hover={{
             transform: "scale(1.1)",
             boxShadow: "outline",

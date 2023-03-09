@@ -4,6 +4,7 @@ export interface INotionPropertiesRequest {
   site: string;
   link_code: string;
   title: string;
+  point: string;
 }
 
 export interface INotionPropertiesService {
@@ -12,4 +13,5 @@ export interface INotionPropertiesService {
   site: string;
   link_code: string;
   title: string;
+  point: string;
 }

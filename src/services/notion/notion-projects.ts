@@ -12,6 +12,7 @@ export const notionProjectService = async () => {
       link_code: itemProjects.link_code,
       site: itemProjects.site,
       title: itemProjects.title,
+      point: itemProjects.point,
     })
   );
 };

@@ -1,6 +1,7 @@
 import { DashBackground, GradientBackground } from "@/sub-components";
 import { Box } from "@chakra-ui/react";
 import * as React from "react";
+import { Footer } from "../footer";
 import { Navbar } from "../navbar";
 
 interface IPropsLayout {
@@ -14,6 +15,7 @@ const Layout = ({ children }: IPropsLayout) => {
       <Navbar />
       <Box>{children}</Box>
       <GradientBackground />
+      <Footer />
     </Box>
   );
 };

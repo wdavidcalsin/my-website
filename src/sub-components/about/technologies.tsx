@@ -29,6 +29,7 @@ const Technologies = () => {
             borderRadius=".5rem"
             fontSize={"1.4rem"}
             transition="all .3s"
+            color={"white"}
             _hover={{
               transform: "scale(1.1)",
               boxShadow: "outline",
@@ -55,6 +56,7 @@ const Technologies = () => {
             borderRadius=".5rem"
             fontSize={"1.4rem"}
             transition="all .3s"
+            color={"white"}
             _hover={{
               transform: "scale(1.1)",
               boxShadow: "outline",

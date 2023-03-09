@@ -8,12 +8,18 @@ export interface Properties {
   site: Site;
   link_code: Site;
   title: Title;
+  point: Point;
 }
 
 export interface Title {
   id: string;
   type: string;
   title: Richtext[];
+}
+export interface Point {
+  id: string;
+  type: string;
+  rich_text: Richtext2[];
 }
 
 export interface Site {

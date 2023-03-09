@@ -5,7 +5,7 @@ import { FaCode } from "react-icons/fa";
 
 const HomeContent = () => {
   return (
-    <Stack spacing={"2.8rem"} paddingX="0" zIndex={20}>
+    <Stack spacing={"2.8rem"} paddingX="0" zIndex={20} paddingBottom="10rem">
       <Box
         display={"flex"}
         alignContent={"center"}
@@ -45,9 +45,8 @@ const HomeContent = () => {
         </Box>
       </Box>
       <Text fontSize={"1.35rem"} lineHeight={"1.75rem"}>
-        Welcome to my digital garden where I share what I am learning about
-        shipping great products, becoming a better developer and growing a
-        career in tech.
+        Welcome! I am Willian, a frontend web developer. Check out my portfolio
+        to see recent projects. Explore my site to learn more!
       </Text>
       <Social />
     </Stack>

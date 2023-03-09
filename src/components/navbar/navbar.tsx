@@ -52,9 +52,9 @@ const Navbar = () => {
             boxShadow="md"
             paddingX={"1rem"}
           >
-            <Box width={"4rem"}>
+            <Link as={LinkNext} href="/" width={"4rem"}>
               <LogoIconWdavid />
-            </Box>
+            </Link>
             <Box display={"flex"} alignItems="center" gap={"1rem"}>
               <Box
                 display={"flex"}
@@ -62,7 +62,7 @@ const Navbar = () => {
                 fontWeight={"extrabold"}
                 fontSize="1.1rem"
               >
-                <Link as={LinkNext} href={"/"}>
+                <Link as={LinkNext} href={"/projects"}>
                   Projects
                 </Link>
                 <Link as={LinkNext} href={"/about"}>

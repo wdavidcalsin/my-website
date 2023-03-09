@@ -29,6 +29,7 @@ export default async function handler(
     tags: row.properties?.tags.rich_text[0].text.content,
     site: row.properties?.site.rich_text[0].text.content,
     link_code: row.properties?.link_code.rich_text[0].text.content,
+    point: row.properties?.point.rich_text[0].text.content,
   }));
 
   res.status(200).send(JSON.stringify(rowsStructured));

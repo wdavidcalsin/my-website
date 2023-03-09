@@ -3,3 +3,4 @@ export * from "./logo";
 export * from "./main-container";
 export * from "./social";
 export * from "./about";
+export * from "./projects";
