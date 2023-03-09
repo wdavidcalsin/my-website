@@ -10,9 +10,9 @@ const Social = () => {
         gap=".5rem"
         alignItems={"center"}
         alignContent="center"
+        transition="all .2s ease-out"
         _hover={{
           transform: "scale(1.1)",
-          transition: "all .2s ease-out",
         }}
       >
         <Box
@@ -20,8 +20,14 @@ const Social = () => {
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"
+          fontSize={"1.4rem"}
+          transition="all .3s"
+          _hover={{
+            transform: "scale(1.1)",
+            boxShadow: "outline",
+          }}
         >
-          <FaGithub fontSize={"1.4rem"} />
+          <FaGithub />
         </Box>
         <Text>Github</Text>
       </Link>
@@ -31,9 +37,9 @@ const Social = () => {
         gap=".5rem"
         alignItems={"center"}
         alignContent="center"
+        transition="all .2s "
         _hover={{
           transform: "scale(1.1)",
-          transition: "all .2s ease-out",
         }}
       >
         <Box
@@ -41,6 +47,11 @@ const Social = () => {
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"
+          transition="all .3s"
+          _hover={{
+            transform: "scale(1.1)",
+            boxShadow: "outline",
+          }}
         >
           <FaLinkedinIn fontSize={"1.4rem"} />
         </Box>
@@ -52,9 +63,9 @@ const Social = () => {
         gap=".5rem"
         alignItems={"center"}
         alignContent="center"
+        transition="all .2s ease-out"
         _hover={{
           transform: "scale(1.1)",
-          transition: "all .2s ease-out",
         }}
       >
         <Box
@@ -62,6 +73,11 @@ const Social = () => {
           bgClip="initial"
           padding={".3rem"}
           borderRadius=".5rem"
+          transition="all .3s"
+          _hover={{
+            transform: "scale(1.1)",
+            boxShadow: "outline",
+          }}
         >
           <FaTwitter fontSize={"1.4rem"} />
         </Box>

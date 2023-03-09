@@ -38,6 +38,9 @@ const Projects = () => {
                 </span>
               ))}
             </Box>
+            <Text fontSize={"1.1rem"} lineHeight="1.75rem">
+              {project.description}
+            </Text>
           </Stack>
         ))}
       </Stack>

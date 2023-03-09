@@ -68,7 +68,9 @@ const Navbar = () => {
                 <Link as={LinkNext} href={"/about"}>
                   About
                 </Link>
-                <Link href={"/"}>Contact</Link>
+                <Link as={LinkNext} href={"/contact"}>
+                  Contact
+                </Link>
               </Box>
               <Box
                 fontSize={"1.7rem"}
