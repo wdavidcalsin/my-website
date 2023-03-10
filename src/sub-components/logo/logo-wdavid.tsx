@@ -3,7 +3,7 @@ import * as React from "react";
 export const LogoIconWdavid = () => {
   return (
     <svg
-      width={"100%"}
+      width="100%"
       viewBox="0 0 134 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
