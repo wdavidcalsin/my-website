@@ -11,8 +11,9 @@ const Social = () => {
       flexWrap={"wrap"}
     >
       <Link
-        href={"/"}
+        href={"https://github.com/wdavidcalsin"}
         display={"flex"}
+        target="_blank"
         gap=".5rem"
         alignItems={"center"}
         alignContent="center"
@@ -39,7 +40,8 @@ const Social = () => {
         <Text>Github</Text>
       </Link>
       <Link
-        href={"/"}
+        href={"https://www.linkedin.com/in/williandavidcalsin/"}
+        target="_blank"
         display={"flex"}
         gap=".5rem"
         alignItems={"center"}
@@ -66,7 +68,8 @@ const Social = () => {
         <Text>Linkedin</Text>
       </Link>
       <Link
-        href={"/"}
+        href={"https://twitter.com/wdavidcalsin"}
+        target="_blank"
         display={"flex"}
         gap=".5rem"
         alignItems={"center"}
