@@ -16,7 +16,7 @@ const ProjectPage = () => {
         <title>Projects - Willian David Calsin</title>
         <meta name="description" content="Projects - Willian David Calsin" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/image/logo-img4-copy.png" />
+        <link rel="icon" href="/image/logo-img5.png" />
       </Head>
       <main>
         <MainContainer paddingTop={"12rem"}>
