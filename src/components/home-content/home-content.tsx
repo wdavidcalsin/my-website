@@ -1,6 +1,7 @@
 import { Social } from "@/sub-components";
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { BsFileText } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 
 const HomeContent = () => {
@@ -48,6 +49,19 @@ const HomeContent = () => {
         Welcome! I am Willian, a frontend web developer. Check out my portfolio
         to see recent projects. Explore my site to learn more!
       </Text>
+      <Box>
+        <Button
+          variant={"outline"}
+          as="a"
+          href="./docs/willian_david_calsin_borda_cv.pdf"
+          target={"_blank"}
+        >
+          <Box width={"2rem"}>
+            <BsFileText />
+          </Box>{" "}
+          Resume
+        </Button>
+      </Box>
       <Social />
     </Stack>
   );

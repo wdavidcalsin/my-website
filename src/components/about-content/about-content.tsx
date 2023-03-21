@@ -1,7 +1,8 @@
 import { useStoreShowNavbar } from "@/store";
 import { Technologies } from "@/sub-components";
-import { Box, Divider, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Divider, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { BsFileText } from "react-icons/bs";
 
 const AboutContent = () => {
   const { setIsTransitionFalse } = useStoreShowNavbar((state) => state);
