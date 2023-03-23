@@ -1,31 +1,41 @@
-import { HomeContent, Projects } from "@/components";
+import { HomeContent, MetaHead, Projects } from "@/components";
+import { notionProjectService } from "@/services";
 import { useStoreShowNavbar } from "@/store";
 import { MainContainer, ViewAllProjects } from "@/sub-components";
-import Head from "next/head";
+import { INotionPropertiesService } from "@/types";
 import { useEffect } from "react";
-import {} from "zustand";
 
-export default function Home() {
-  const { setIsTransitionTrue } = useStoreShowNavbar((state) => state);
-  useEffect(() => {
-    setIsTransitionTrue();
-  }, [setIsTransitionTrue]);
+interface IPropsHome {
+  projects: INotionPropertiesService[];
+}
 
+function Home({ projects }: IPropsHome) {
   return (
     <>
-      <Head>
-        <title>Home - Willian David Calsin</title>
-        <meta name="description" content="Home - Willian David Calsin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/image/logo-img5.png" />
-      </Head>
+      <MetaHead
+        title="Home - Willian David Calsin"
+        description="Home - Willian David Calsin"
+      />
       <main>
         <MainContainer paddingTop={"12rem"}>
           <HomeContent />
-          <Projects projectType="best" />
+          <Projects projects={projects} />
           <ViewAllProjects />
         </MainContainer>
       </main>
     </>
   );
 }
+
+export async function getStaticProps() {
+  const res = await notionProjectService();
+  const projects = res.filter((project) => Number(project.point) >= 7);
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+export default Home;

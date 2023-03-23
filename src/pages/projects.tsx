@@ -1,30 +1,39 @@
-import { AboutContent, HomeContent, Projects } from "@/components";
+import { AboutContent, HomeContent, MetaHead, Projects } from "@/components";
+import { notionProjectService } from "@/services";
 import { useStoreShowNavbar } from "@/store";
 import { MainContainer } from "@/sub-components";
+import { INotionPropertiesService } from "@/types";
 import Head from "next/head";
 import { useEffect } from "react";
 
-const ProjectPage = () => {
-  const { setIsTransitionFalse } = useStoreShowNavbar((state) => state);
-  useEffect(() => {
-    setIsTransitionFalse();
-  }, [setIsTransitionFalse]);
+interface IPropsProjectPage {
+  projects: INotionPropertiesService[];
+}
 
+const ProjectPage = ({ projects }: IPropsProjectPage) => {
   return (
     <>
-      <Head>
-        <title>Projects - Willian David Calsin</title>
-        <meta name="description" content="Projects - Willian David Calsin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/image/logo-img5.png" />
-      </Head>
+      <MetaHead
+        title="Projects - Willian David Calsin"
+        description="Projects - Willian David Calsin"
+      />
       <main>
         <MainContainer paddingTop={"12rem"}>
-          <Projects />
+          <Projects projects={projects} />
         </MainContainer>
       </main>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const projects = await notionProjectService();
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
 
 export default ProjectPage;

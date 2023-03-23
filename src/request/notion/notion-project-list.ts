@@ -1,7 +1,8 @@
 import { INotionPropertiesRequest, Properties } from "@/types";
 
 export const notionProjectRequest = async () => {
-  const response = await fetch(`/api/notion`);
+  const { API_URL_SERVER } = process.env;
+  const response = await fetch(`${API_URL_SERVER}`);
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);

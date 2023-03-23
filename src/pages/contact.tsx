@@ -1,16 +1,14 @@
-import { ContactContent } from "@/components";
+import { ContactContent, MetaHead } from "@/components";
 import { MainContainer } from "@/sub-components";
 import Head from "next/head";
 
 const Contact = () => {
   return (
     <>
-      <Head>
-        <title>Contact - Willian David Calsin</title>
-        <meta name="description" content="Contact - Willian David Calsin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/image/logo-img5.png" />
-      </Head>
+      <MetaHead
+        title="Contact - Willian David Calsin"
+        description="Contact - Willian David Calsin"
+      />
       <main>
         <MainContainer paddingTop={"12rem"}>
           <ContactContent />
