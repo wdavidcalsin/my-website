@@ -27,7 +27,7 @@ const HomeContent = () => {
           <Image
             width="100"
             height={"100"}
-            src={"/image/logo-img4-copy.png"}
+            src={"/image/logo-img.png"}
             alt={"logo"}
           />
         </Box>

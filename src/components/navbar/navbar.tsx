@@ -11,7 +11,6 @@ const Navbar = () => {
   const { isTransition, setIsTransitionTrue } = useStoreShowNavbar(
     (state) => state
   );
-  const { toggleColorMode } = useColorMode();
 
   const { y } = useWindowScroll();
 
@@ -34,11 +33,9 @@ const Navbar = () => {
       top={"6"}
       zIndex="30"
       width={"full"}
+      style={{ pointerEvents: "auto", backdropFilter: "blur" }}
     >
-      <Collapse
-        style={{ pointerEvents: "auto", backdropFilter: "blur" }}
-        in={isShowNav}
-      >
+      <Collapse in={isShowNav}>
         <MainContainer>
           <Box
             display={"flex"}

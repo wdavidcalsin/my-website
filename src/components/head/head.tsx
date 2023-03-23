@@ -12,7 +12,7 @@ const MetaHead: React.FC<IPropsMetaHead> = ({ title, description }) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/image/logo-img5.png" />
+      <link rel="icon" href="/image/logo-img.png" />
     </Head>
   );
 };
