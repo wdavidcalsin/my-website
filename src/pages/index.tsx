@@ -4,12 +4,17 @@ import { useStoreShowNavbar } from "@/store";
 import { MainContainer, ViewAllProjects } from "@/sub-components";
 import { INotionPropertiesService } from "@/types";
 import { useEffect } from "react";
-
+import * as React from "react";
 interface IPropsHome {
   projects: INotionPropertiesService[];
 }
 
 function Home({ projects }: IPropsHome) {
+  const { setIsTransitionTrue } = useStoreShowNavbar((state) => state);
+  React.useEffect(() => {
+    setIsTransitionTrue();
+  }, [setIsTransitionTrue]);
+
   return (
     <>
       <MetaHead
