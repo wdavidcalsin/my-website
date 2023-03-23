@@ -26,7 +26,7 @@ const ContactContent = () => {
           <Divider orientation="horizontal" />
         </Box>
         <Text fontSize={"1.35rem"} lineHeight={"1.75rem"}>
-          You can contact me by email at david2c142 at gmail.com
+          You can contact me by email at wdavidcalsincb at gmail.com
         </Text>
         <UnorderedList
           fontSize={"1.2rem"}
@@ -36,8 +36,14 @@ const ContactContent = () => {
           <ListItem>
             <Box display={"flex"} alignItems="center" gap={".5rem"}>
               Linkedin:
-              <Link href="/" display={"flex"} alignItems="center" gap={".5rem"}>
-                @wdavidcalsin{" "}
+              <Link
+                href="https://www.linkedin.com/in/williandavidcalsin/"
+                display={"flex"}
+                alignItems="center"
+                gap={".5rem"}
+                target="_blank"
+              >
+                @wdavidcalsin
                 <Box>
                   <Box
                     bgGradient="linear(to-l, #0633AA, #094DFF)"
@@ -60,7 +66,13 @@ const ContactContent = () => {
           <ListItem>
             <Box display={"flex"} alignItems="center" gap={".5rem"}>
               Github:
-              <Link href="/" display={"flex"} alignItems="center" gap={".5rem"}>
+              <Link
+                href="https://github.com/wdavidcalsin/"
+                display={"flex"}
+                alignItems="center"
+                gap={".5rem"}
+                target="_blank"
+              >
                 @wdavidcalsin{" "}
                 <Box>
                   <Box
@@ -84,7 +96,13 @@ const ContactContent = () => {
           <ListItem>
             <Box display={"flex"} alignItems="center" gap={".5rem"}>
               Twitter:
-              <Link href="/" display={"flex"} alignItems="center" gap={".5rem"}>
+              <Link
+                href="https://twitter.com/wdavidcalsin"
+                display={"flex"}
+                alignItems="center"
+                gap={".5rem"}
+                target="_blank"
+              >
                 @wdavidcalsin{" "}
                 <Box>
                   <Box

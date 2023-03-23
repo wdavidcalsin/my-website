@@ -53,7 +53,7 @@ const HomeContent = () => {
         <Button
           variant={"outline"}
           as="a"
-          href="./docs/willian_david_calsin_borda_cv.pdf"
+          href="./docs/willian_david_calsin_borda_spanish_cv.pdf"
           target={"_blank"}
         >
           <Box width={"2rem"}>
