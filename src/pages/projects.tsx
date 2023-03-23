@@ -1,16 +1,19 @@
-import { AboutContent, HomeContent, MetaHead, Projects } from "@/components";
+import { MetaHead, Projects } from "@/components";
 import { notionProjectService } from "@/services";
 import { useStoreShowNavbar } from "@/store";
 import { MainContainer } from "@/sub-components";
 import { INotionPropertiesService } from "@/types";
-import Head from "next/head";
-import { useEffect } from "react";
-
+import * as React from "react";
 interface IPropsProjectPage {
   projects: INotionPropertiesService[];
 }
 
 const ProjectPage = ({ projects }: IPropsProjectPage) => {
+  const { setIsTransitionFalse } = useStoreShowNavbar((state) => state);
+  React.useEffect(() => {
+    setIsTransitionFalse();
+  }, [setIsTransitionFalse]);
+
   return (
     <>
       <MetaHead

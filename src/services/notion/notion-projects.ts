@@ -3,9 +3,7 @@ import { INotionPropertiesService } from "@/types";
 import { tagsSeparator } from "@/utils";
 
 export const notionProjectService = async () => {
-  console.log("service is run...");
   const projects = await notionProjectRequest();
-  console.log(projects);
 
   return projects.map(
     (itemProjects): INotionPropertiesService => ({
