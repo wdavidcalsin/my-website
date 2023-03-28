@@ -14,8 +14,8 @@ const Layout = ({ children }: IPropsLayout) => {
       <DashBackground />
       <Navbar />
       <Box>{children}</Box>
-      <GradientBackground />
       <Footer />
+      <GradientBackground />
     </Box>
   );
 };

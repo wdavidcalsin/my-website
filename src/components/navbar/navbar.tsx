@@ -1,6 +1,6 @@
 import { useStoreShowNavbar } from "@/store";
 import { LogoIconWdavid, MainContainer } from "@/sub-components";
-import { Box, Collapse, Link, useColorMode } from "@chakra-ui/react";
+import { Box, Collapse, Link, ScaleFade, useColorMode } from "@chakra-ui/react";
 import LinkNext from "next/link";
 import * as React from "react";
 import { BsSunFill } from "react-icons/bs";
@@ -33,10 +33,18 @@ const Navbar = () => {
       top={"6"}
       zIndex="30"
       width={"full"}
-      style={{ pointerEvents: "auto", backdropFilter: "blur" }}
     >
-      <Collapse in={isShowNav}>
-        <MainContainer>
+      <MainContainer>
+        <ScaleFade
+          initialScale={0.7}
+          in={isShowNav}
+          style={{
+            pointerEvents: "auto",
+            backdropFilter: "blur(10px)",
+            willChange: "transform",
+            borderRadius: ".7rem",
+          }}
+        >
           <Box
             display={"flex"}
             justifyContent={"space-between"}
@@ -48,7 +56,6 @@ const Navbar = () => {
             borderRadius=".7rem"
             boxShadow="md"
             paddingX={"1rem"}
-            backdropFilter="blur(5px)"
           >
             <Link as={LinkNext} href="/" width={"4rem"}>
               <LogoIconWdavid />
@@ -83,8 +90,8 @@ const Navbar = () => {
               </Box> */}
             </Box>
           </Box>
-        </MainContainer>
-      </Collapse>
+        </ScaleFade>
+      </MainContainer>
     </Box>
   );
 };

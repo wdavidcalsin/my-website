@@ -44,7 +44,7 @@ const Projects: React.FC<IProjectProps> = ({ projects }) => {
                 </span>
               ))}
             </Box>
-            <Text fontSize={"1.1rem"} lineHeight="1.75rem">
+            <Text fontSize={"1.1rem"} lineHeight="1.75rem" color={"#aaaaaa"}>
               {project.description}
             </Text>
           </Stack>

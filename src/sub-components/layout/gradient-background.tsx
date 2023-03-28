@@ -17,9 +17,12 @@ const GradientBackground = () => {
         backgroundPosition="top"
         backgroundRepeat={"no-repeat"}
         opacity="0.3"
-        backgroundImage={"/bg_gradient.jfif"}
+        backgroundImage={
+          "https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9"
+        }
         bgSize="cover"
         style={{
+          willChange: "transform",
           transform: `translateY(${Math.min(y / 3, 167)}px)`,
         }}
       ></Box>

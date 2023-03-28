@@ -8,13 +8,15 @@ const DashBackground = () => {
         position: "fixed",
         isolation: "isolate",
         zIndex: "50",
-        opacity: "70",
+        opacity: "0.7",
         mixBlendMode: "soft-light",
+        width: "100%",
+        height: "100%",
       }}
       width="100%"
       height="100%"
     >
-      <filter id="pedroduarteisalegend">
+      <filter id="wdavidcalsin">
         <feTurbulence
           type="fractalNoise"
           baseFrequency="0.80"
@@ -22,11 +24,7 @@ const DashBackground = () => {
           stitchTiles="stitch"
         />
       </filter>
-      <rect
-        width="100%"
-        height="100%"
-        filter="url(#pedroduarteisalegend)"
-      ></rect>
+      <rect width="100%" height="100%" filter="url(#wdavidcalsin)"></rect>
     </svg>
   );
 };
