@@ -18,5 +18,6 @@
     "wdavidcalsin",
     "Willian",
     "zustand"
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

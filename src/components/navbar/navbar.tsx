@@ -1,10 +1,17 @@
 import { useStoreShowNavbar } from "@/store";
 import { LogoIconWdavid, MainContainer } from "@/sub-components";
-import { Box, Collapse, Link, ScaleFade, useColorMode } from "@chakra-ui/react";
-import LinkNext from "next/link";
+import {
+  Box,
+  Collapse,
+  Link as ChakraLink,
+  ScaleFade,
+  useColorMode,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 import * as React from "react";
 import { BsSunFill } from "react-icons/bs";
 import { useWindowScroll } from "react-use";
+import { ActiveLink } from ".";
 
 const Navbar = () => {
   const [isShowNav, setIsShowNav] = React.useState<boolean>(false);
@@ -57,9 +64,9 @@ const Navbar = () => {
             boxShadow="md"
             paddingX={"1rem"}
           >
-            <Link as={LinkNext} href="/" width={"4rem"}>
+            <ChakraLink as={NextLink} href="/" width={"4rem"}>
               <LogoIconWdavid />
-            </Link>
+            </ChakraLink>
             <Box display={"flex"} alignItems="center" gap={"1rem"}>
               <Box
                 display={"flex"}
@@ -67,15 +74,9 @@ const Navbar = () => {
                 fontWeight={"extrabold"}
                 fontSize="1.1rem"
               >
-                <Link as={LinkNext} href={"/projects"}>
-                  Projects
-                </Link>
-                <Link as={LinkNext} href={"/about"}>
-                  About
-                </Link>
-                <Link as={LinkNext} href={"/contact"}>
-                  Contact
-                </Link>
+                <ActiveLink href={"/projects"}>Projects</ActiveLink>
+                <ActiveLink href={"/about"}>About</ActiveLink>
+                <ActiveLink href={"/contact"}>Contact</ActiveLink>
               </Box>
               {/* <Box
                 fontSize={"1.7rem"}
