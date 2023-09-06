@@ -69,6 +69,7 @@ export interface Fields {
     name: string;
     title: string;
     slug: string;
+    description: string;
     body: Body;
     image: Image;
 }
