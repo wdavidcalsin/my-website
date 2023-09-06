@@ -1,14 +1,23 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import { fontFamily } from "./font";
+import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { fontFamily } from './font';
 
 export const config: ThemeConfig = {
-  initialColorMode: "dark",
-  useSystemColorMode: false,
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
 };
 
 const theme = extendTheme({
-  config,
-  fonts: fontFamily,
+    config,
+    fonts: fontFamily,
+    styles: {
+        global: {
+            'html, body': {
+                // color: 'gray.600',
+                // lineHeight: 'tall',
+                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            },
+        },
+    },
 });
 
 export default theme;

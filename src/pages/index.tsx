@@ -3,6 +3,7 @@ import { notionProjectService } from '@/services';
 import { useStoreShowNavbar } from '@/store';
 import { MainContainer, ViewAllProjects } from '@/sub-components';
 import { INotionPropertiesService } from '@/types';
+import { Box } from '@chakra-ui/react';
 import * as React from 'react';
 
 interface IPropsHome {
@@ -19,13 +20,13 @@ function Home({ projects }: IPropsHome) {
     return (
         <>
             <MetaHead title="Home - Willian David Calsin" description="Home - Willian David Calsin" />
-            <main>
+            <Box>
                 <MainContainer paddingTop={'12rem'}>
                     <HomeContent />
                     <Projects projects={projects} />
                     <ViewAllProjects />
                 </MainContainer>
-            </main>
+            </Box>
         </>
     );
 }
