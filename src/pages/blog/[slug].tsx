@@ -1,11 +1,9 @@
 import { clientContentFul } from '@/lib/contentFul';
+import { IResponseContentFul } from '@/types';
 import { Skeleton } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 
-// interface IProps {
-//     response: Fields;
-// }
 export function formatDate(dateString: any, options: any) {
     const { format } = new Intl.DateTimeFormat('en-US', options);
     return format(new Date(dateString));
@@ -14,14 +12,15 @@ export function formatDate(dateString: any, options: any) {
 const BlogPost = ({ post, preview }: any) => {
     const router = useRouter();
     const { title, coverImage, author, date } = post.fields;
-    // console.log(post.fields);
+
+    console.log(post);
 
     return (
         <section className="section">
             <div className="container">
                 <article className="prose mx-auto">
                     {router.isFallback ? (
-                        <Skeleton />
+                        <Skeleton w={345} h={200} />
                     ) : (
                         <>
                             <h2>{title}</h2>
@@ -62,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
 };
 
 export const getStaticPaths = async () => {
-    const response = await clientContentFul.getEntries({ content_type: 'blogPage-2' });
+    const response = await clientContentFul.getEntries<IResponseContentFul>({ content_type: 'blogPage-2' });
 
     const paths = response.items.map((item) => ({
         params: { slug: item.fields.slug },
