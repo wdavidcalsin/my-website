@@ -1,51 +1,36 @@
-<br />
-<br />
-<p align="center">
-  <a href="#" rel="noopener" target="_blank"><img width="150" src="https://i.postimg.cc/XNFhBw83/svgviewer-png-output.png" alt="MUI logo"></a>
-</p>
-<br />
-<br />
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<h1 align="center">My Personal Website</h1>
+## Getting Started
 
-**_Language_**
+First, run the development server:
 
-- [🇪🇸 Spanish](./README.es.md)
-- 🇺🇸 English
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-**This is my personal website:** created to showcase my technical skills and share my work.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Features
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- The "About Me" section contains detailed information about me and my technical abilities.
-- In the "Projects" section, my most recent projects are displayed and you can click on each one to be redirected to the corresponding project.
-- The "Contact" section contains links to my LinkedIn and Twitter profiles.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Requirements
+## Learn More
 
-No special requirements are needed to use the website. It can be accessed through any modern web browser.
+To learn more about Next.js, take a look at the following resources:
 
-## Installation
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-No installation is required. Simply visit https://wdavid-cb.vercel.app on your web browser.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Usage
+## Deploy on Vercel
 
-Navigate the website using the navigation bar located at the top of the page.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Contribution
-
-If you would like to contribute to this project, please open an issue or send a pull request. We are happy to review your contributions!
-
-## Credits
-
-- I used Chakra UI for the design and structure of the website.
-- Icons are provided by React Icons.
-
-## Author
-
-My name is Willian David Calsin and I am the author of this project.
-
-## License
-
-This project is under the MIT License.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
