@@ -20,11 +20,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             {/* <body className={inter.className}> */}
             <body>
                 <ThemeProvider
-                    // key={"theme-provider"}
                     attribute="class"
                     defaultTheme="system"
                     enableSystem

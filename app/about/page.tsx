@@ -80,9 +80,7 @@ const Page: React.FC = () => {
                             >
                                 <MailIcon className="text-zinc-500 group-hover:text-teal-500" />
 
-                                <span className="ml-4">
-                                    wdavidcalsin@gmail.com
-                                </span>
+                                <span className="ml-4">@wdavidcalsin</span>
                             </Link>
                         </li>
                     </ul>

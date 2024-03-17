@@ -23,8 +23,8 @@ export const menuItems: MenuItemProps[] = [
         title: "Projects",
         href: "/projects",
     },
-    {
-        title: "Contact",
-        href: "/contact",
-    },
+    // {
+    //     title: "Contact",
+    //     href: "/contact",
+    // },
 ];

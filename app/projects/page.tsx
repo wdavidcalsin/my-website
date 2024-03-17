@@ -2,37 +2,35 @@ import React from "react";
 import { IProject } from "../types/project";
 import ProjectsSection from "./components/projects-section";
 
-interface PageProps {
-    // Define the props for your page component here
-}
+interface PageProps {}
 
 const listOfProjects: IProject[] = [
     {
         title: "Project 1",
         description: "Description of the project 1",
-        githubLink: "https://github.com",
-        previewLink: "https://preview.com",
+        githubLink: "#",
+        previewLink: "#",
         logo: "/images/sample-icons.svg",
     },
     {
         title: "Project 2",
         description: "Description of the project 2",
 
-        previewLink: "https://preview.com",
+        previewLink: "#",
         logo: "/images/sample-icons.svg",
     },
     {
         title: "Project 3",
         description: "Description of the project 3",
-        githubLink: "https://github.com",
+        githubLink: "#",
 
         logo: "/images/sample-icons.svg",
     },
     {
         title: "Project 4",
         description: "Description of the project 4",
-        githubLink: "https://github.com",
-        previewLink: "https://preview.com",
+        githubLink: "#",
+        previewLink: "#",
         logo: "/images/sample-icons.svg",
     },
 ];

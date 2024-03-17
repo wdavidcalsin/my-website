@@ -14,7 +14,7 @@ const AvatarCustom: React.FC = () => {
         !isHomePage && (
             <Link href="/">
                 <Avatar>
-                    <AvatarImage src="/images/avatar.png" alt="@wdavid" />
+                    <AvatarImage src="/images/avatar-2.png" alt="@wdavid" />
                     <AvatarFallback>WD</AvatarFallback>
                 </Avatar>
             </Link>

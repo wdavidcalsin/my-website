@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
     return (
         <nav>
             <div className="flex justify-between min-h-20 items-center">
-                <div>
+                <div className="w-5">
                     <AvatarCustom />
                 </div>
                 <div>

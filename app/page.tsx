@@ -70,7 +70,7 @@ export default function Home() {
                     <div className="mb-6 ">
                         <Avatar className="w-14 h-14">
                             <AvatarImage
-                                src="/images/avatar.png"
+                                src="/images/avatar-2.png"
                                 alt="@wdavid"
                             />
                             <AvatarFallback>WD</AvatarFallback>

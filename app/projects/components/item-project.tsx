@@ -22,7 +22,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                     alt=""
                 />
             </div>
-            <div className="relative z-10 flex flex-col gap-4">
+            <div className="relative z-10 flex flex-col gap-3">
                 <h2 className="font-semibold text-zinc-900">
                     <span>{title}</span>
                 </h2>
@@ -32,11 +32,11 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                 </p>
             </div>
             {(githubLink || previewLink) && (
-                <div className="relative flex gap-4 z-10">
+                <div className="relative flex gap-4 z-10 text-zinc-500">
                     {githubLink && (
                         <Link
                             href={githubLink}
-                            className="group-link flex gap-2 text-zinc-400 items-center hover:text-teal-500 "
+                            className="group-link flex gap-2  items-center hover:text-teal-500 "
                             target="_blank"
                         >
                             <GitHubIcon
@@ -49,7 +49,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                     {previewLink && (
                         <Link
                             href={previewLink}
-                            className="group-link flex gap-2 text-zinc-400 items-center hover:text-teal-500 "
+                            className="group-link flex gap-2  items-center hover:text-teal-500 "
                             target="_blank"
                         >
                             <LinkIcon
