@@ -1,3 +1,4 @@
+import * as React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -6,6 +7,7 @@ import { Container } from "./components/container";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-provider";
+import { useScroll } from "react-use";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -29,16 +31,14 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <div className=" bg-[#FAFAFA]">
+                    <div className=" bg-background_second">
                         <Container
-                            className="bg-white min-h-screen shadow-sm"
+                            className="bg-background min-h-screen shadow-sm shadow-zinc-200 dark:shadow-zinc-500"
                             variant={"fullMobileConstrainedPadded"}
                         >
-                            <div className="px-0 sm:px-10 md:px-20">
-                                <Navigation />
-                                <div className="mt-20">{children}</div>
-                                <Footer />
-                            </div>
+                            <Navigation />
+                            <div className="pt-40">{children}</div>
+                            <Footer />
                         </Container>
                     </div>
                 </ThemeProvider>

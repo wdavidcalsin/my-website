@@ -38,7 +38,7 @@ const Container: React.FC<ContainerProps> = ({
             {variant === "narrowConstrainedPadded" ? (
                 <div className="mx-auto max-w-3xl ">{children}</div>
             ) : (
-                children
+                <div className="px-0 sm:px-10 md:px-20">{children}</div>
             )}
         </Comp>
     );

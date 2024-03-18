@@ -91,7 +91,7 @@ export default function Home() {
                                 <Link
                                     href={item.href}
                                     key={index}
-                                    className="block p-2 transition-all hover:text-[#52525B] font-semibold"
+                                    className="block p-2 transition-all hover:text-[#52525B] dark:hover:text-zinc-400 font-semibold"
                                 >
                                     {item.children}
                                 </Link>

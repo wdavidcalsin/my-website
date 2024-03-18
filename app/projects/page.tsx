@@ -7,7 +7,8 @@ interface PageProps {}
 const listOfProjects: IProject[] = [
     {
         title: "Project 1",
-        description: "Description of the project 1",
+        description:
+            "Planetaria Creating technology to empower civilians to explore space on their own terms",
         githubLink: "#",
         previewLink: "#",
         logo: "/images/sample-icons.svg",

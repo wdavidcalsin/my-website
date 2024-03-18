@@ -4,7 +4,7 @@ import React from "react";
 
 const MenuNavigation: React.FC = () => {
     return (
-        <div className="flex gap-2 font-bold text-sm justify-center text-zinc-700">
+        <div className="flex gap-2 font-bold text-sm justify-center text-zinc-700 dark:text-zinc-300">
             {menuItems.map((item, index) => {
                 return (
                     <Link

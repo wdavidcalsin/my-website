@@ -23,7 +23,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                 />
             </div>
             <div className="relative z-10 flex flex-col gap-3">
-                <h2 className="font-semibold text-zinc-900">
+                <h2 className="font-semibold text-zinc-900 dark:text-zinc-200">
                     <span>{title}</span>
                 </h2>
 
@@ -32,7 +32,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                 </p>
             </div>
             {(githubLink || previewLink) && (
-                <div className="relative flex gap-4 z-10 text-zinc-500">
+                <div className="relative flex gap-4 z-10 text-zinc-500 dark:text-zinc-300">
                     {githubLink && (
                         <Link
                             href={githubLink}
