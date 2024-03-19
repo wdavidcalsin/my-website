@@ -1,0 +1,7 @@
+.code_format_dark > code > span {
+    background: #18181b !important;
+}
+
+.code_format_light > code > span {
+    background: #fafafa !important;
+}

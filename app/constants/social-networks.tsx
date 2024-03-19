@@ -15,11 +15,11 @@ export const socialNetworks: ISocialNetworks[] = [
         href: "",
         children: <XIcon />,
     },
-    {
-        title: "Instagram",
-        href: "",
-        children: <InstagramIcon />,
-    },
+    // {
+    //     title: "Instagram",
+    //     href: "",
+    //     children: <InstagramIcon />,
+    // },
     {
         title: "GitHub",
         href: "",

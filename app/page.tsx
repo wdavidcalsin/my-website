@@ -3,6 +3,9 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { socialNetworks } from "./constants/social-networks";
 import styles from "./css-module/home-page.module.css";
+import ArticleCard from "./articles/article-card";
+import { getArticles } from "./services/articles";
+import Articles from "./articles/articles";
 
 // Interface for list icons for social networks
 
@@ -63,6 +66,8 @@ function getRandomInt(max: number) {
 }
 
 export default function Home() {
+    const articles = getArticles();
+
     return (
         <main className="">
             <div>
@@ -100,12 +105,12 @@ export default function Home() {
                     </div>
                 </header>
                 <div className="mt-6">
-                    <h2 className="text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-                        Projects
+                    <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-500 dark:hover:text-teal-500 hover:underline">
+                        <Link href="/projects">Projects</Link>
                     </h2>
                     <div
                         className={cn(
-                            "flex gap-8 py-8 overflow-y-auto px-6",
+                            "flex gap-8 py-8 overflow-y-auto",
                             styles.no_scrollbar
                         )}
                     >
@@ -117,14 +122,21 @@ export default function Home() {
                                         className={cn(
                                             "rounded-2xl overflow-hidden min-w-60 min-h-72 relative",
                                             `bg-[url('https://img.freepik.com/foto-gratis/tranquila-puesta-sol-verano-sobre-silueta-montana-generada-ia_188544-19648.jpg')] bg-no-repeat bg-cover`,
-                                            rotates[
-                                                getRandomInt(rotates.length)
-                                            ]
+                                            index !== 0 &&
+                                                rotates[getRandomInt(8)]
                                         )}
                                     ></div>
                                 </Link>
                             );
                         })}
+                    </div>
+                </div>
+                <div className="mt-6">
+                    <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-600 dark:hover:text-teal-600 hover:underline">
+                        <Link href="/articles">Articles</Link>
+                    </h2>
+                    <div className="py-10">
+                        <Articles />
                     </div>
                 </div>
             </div>
