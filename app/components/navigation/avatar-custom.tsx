@@ -8,7 +8,6 @@ import React from "react";
 const AvatarCustom: React.FC = () => {
     const pathname = usePathname();
     const isHomePage = pathname === "/";
-    console.log(pathname);
 
     return (
         !isHomePage && (

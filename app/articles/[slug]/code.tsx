@@ -42,15 +42,20 @@ const Code = (props: any) => {
         <div className="text-sm flex flex-col gap-0 ">
             <AdminBar code={codeContent} language={language} />
             <SyntaxHighlighter
+                language={language}
                 className={cn(
                     "rounded-lg bg-zinc-900 border border-zinc-300 dark:border-zinc-800",
                     isDark ? style.code_format_dark : style.code_format_light
                 )}
-                style={oneDark}
                 customStyle={{
                     background: isDark ? "transparent" : "#FAFAFA",
                 }}
-                language={language}
+                // lineProps={{ style: { paddingBottom: 8 } }}
+                // wrapLines={true}
+                style={oneDark}
+                wrapLines={true}
+                showLineNumbers={true}
+                // codeTagProps={{ style: { fontFamily: "code" } }}
             >
                 {codeContent}
             </SyntaxHighlighter>

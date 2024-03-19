@@ -18,7 +18,7 @@ function AdminBar({ code, language }: { code: string; language: string }) {
     return (
         <div className="bg-zinc-300 dark:bg-zinc-800 h-[40px] relative top-3 rounded-t-lg flex justify-between items-center px-4">
             <div className="flex items-center gap-2 text-zinc-700 dark:text-zinc-300 text-sm">
-                {LANGUAGES[language].icon}
+                {LANGUAGES[language]?.icon}
                 <span className="-mt-1 ">{language}</span>
             </div>
             <button

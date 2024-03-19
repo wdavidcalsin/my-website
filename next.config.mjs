@@ -5,6 +5,14 @@ import createMDX from "@next/mdx";
 const nextConfig = {
     // Configure `pageExtensions`` to include MDX files
     pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+    images: {
+        domains: [
+            "sangw.in",
+            "localhost",
+            "picsum.photos",
+            "images.unsplash.com",
+        ], // <== Domain name
+    },
     // Optionally, add any other Next.js config below
 };
 
