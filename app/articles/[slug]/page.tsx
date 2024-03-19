@@ -94,6 +94,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 className="rounded-lg shadow-sm w-full h-auto"
                 {...props}
                 alt=""
+                // quality={100}
             />
         ),
 

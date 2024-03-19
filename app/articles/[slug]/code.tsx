@@ -1,13 +1,16 @@
 "use client";
 
-import * as React from "react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import * as React from "react";
+import { FadeLoader } from "react-spinners";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {
+    materialLight,
+    oneDark,
+} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import style from "../../css-module/code-format-mdx.module.css";
 import AdminBar from "./admin-bar";
-import { useTheme } from "next-themes";
-import { FadeLoader } from "react-spinners";
 
 const Code = (props: any) => {
     const { resolvedTheme } = useTheme();
@@ -50,12 +53,9 @@ const Code = (props: any) => {
                 customStyle={{
                     background: isDark ? "transparent" : "#FAFAFA",
                 }}
-                // lineProps={{ style: { paddingBottom: 8 } }}
-                // wrapLines={true}
-                style={oneDark}
+                style={isDark ? oneDark : materialLight}
                 wrapLines={true}
                 showLineNumbers={true}
-                // codeTagProps={{ style: { fontFamily: "code" } }}
             >
                 {codeContent}
             </SyntaxHighlighter>

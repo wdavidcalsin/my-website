@@ -90,13 +90,13 @@ export default function Home() {
                         where we develop technologies that empower regular
                         people to explore space on their own terms.
                     </p>
-                    <div className="mt-6 flex gap-4 text-zinc-500 ">
+                    <div className="mt-6 flex gap-6 text-zinc-500 ">
                         {socialNetworks.map((item, index) => {
                             return (
                                 <Link
                                     href={item.href}
                                     key={index}
-                                    className="block p-2 transition-all hover:text-[#52525B] dark:hover:text-zinc-400 font-semibold"
+                                    className="block transition-all hover:text-[#52525B] dark:hover:text-zinc-400 font-semibold"
                                 >
                                     {item.children}
                                 </Link>
@@ -104,7 +104,7 @@ export default function Home() {
                         })}
                     </div>
                 </header>
-                <div className="mt-6">
+                <div className="mt-12">
                     <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-500 dark:hover:text-teal-500 hover:underline">
                         <Link href="/projects">Projects</Link>
                     </h2>
@@ -131,7 +131,7 @@ export default function Home() {
                         })}
                     </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-12">
                     <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-600 dark:hover:text-teal-600 hover:underline">
                         <Link href="/articles">Articles</Link>
                     </h2>
