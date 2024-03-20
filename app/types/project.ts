@@ -4,4 +4,5 @@ export interface IProject {
     githubLink?: string;
     previewLink?: string;
     logo?: string;
+    coverImage?: string;
 }

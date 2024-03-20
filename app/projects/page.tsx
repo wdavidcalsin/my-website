@@ -1,40 +1,8 @@
 import React from "react";
-import { IProject } from "../types/project";
 import ProjectsSection from "./components/projects-section";
+import { listOfProjects } from "../constants/projects";
 
 interface PageProps {}
-
-const listOfProjects: IProject[] = [
-    {
-        title: "Project 1",
-        description:
-            "Planetaria Creating technology to empower civilians to explore space on their own terms",
-        githubLink: "#",
-        previewLink: "#",
-        logo: "/images/sample-icons.svg",
-    },
-    {
-        title: "Project 2",
-        description: "Description of the project 2",
-
-        previewLink: "#",
-        logo: "/images/sample-icons.svg",
-    },
-    {
-        title: "Project 3",
-        description: "Description of the project 3",
-        githubLink: "#",
-
-        logo: "/images/sample-icons.svg",
-    },
-    {
-        title: "Project 4",
-        description: "Description of the project 4",
-        githubLink: "#",
-        previewLink: "#",
-        logo: "/images/sample-icons.svg",
-    },
-];
 
 const Page: React.FC<PageProps> = () => {
     return (

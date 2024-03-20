@@ -13,8 +13,9 @@ const Articles: React.FC<ArticlesProps> = ({ variant = "default" }) => {
     return (
         <ul
             className={cn(
-                "flex flex-col gap-16 md:border-l border-zinc-100 dark:border-zinc-800 mt-6",
-                variant === "default" && "border-zinc-100 dark:border-zinc-800"
+                "flex flex-col gap-16  border-zinc-100 dark:border-zinc-800 mt-6",
+                variant === "default" &&
+                    "md:border-l border-zinc-100 dark:border-zinc-800"
             )}
         >
             {articles.map((article) => (

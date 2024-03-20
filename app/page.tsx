@@ -2,72 +2,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { socialNetworks } from "./constants/social-networks";
-import styles from "./css-module/home-page.module.css";
+
 import ArticleCard from "./articles/article-card";
 import { getArticles } from "./services/articles";
 import Articles from "./articles/articles";
-
-// Interface for list icons for social networks
-
-const rotates = [
-    "rotate-2",
-    "rotate-3",
-    "rotate-4",
-    "rotate-6",
-
-    "-rotate-2",
-    "-rotate-3",
-    "-rotate-4",
-    "-rotate-6",
-];
-
-interface IProjectImage {
-    href: string;
-    src: string;
-}
-
-const projectsImages: IProjectImage[] = [
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-    {
-        href: "",
-        src: "/images/project-1.webp",
-    },
-];
-
-function getRandomInt(max: number) {
-    return Math.floor(Math.random() * max);
-}
+import { listOfProjects } from "./constants/projects";
+import ProjectCoverCard from "./components/home/project-cover-card";
+import ProjectsCarousel from "./components/home/projects-carousel";
 
 export default function Home() {
-    const articles = getArticles();
-
     return (
         <main className="">
             <div>
@@ -108,35 +51,14 @@ export default function Home() {
                     <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-500 dark:hover:text-teal-500 hover:underline">
                         <Link href="/projects">Projects</Link>
                     </h2>
-                    <div
-                        className={cn(
-                            "flex gap-8 py-8 overflow-y-auto",
-                            styles.no_scrollbar
-                        )}
-                    >
-                        {projectsImages.map((item, index) => {
-                            return (
-                                <Link href={item.href} key={index}>
-                                    <div
-                                        key={index}
-                                        className={cn(
-                                            "rounded-2xl overflow-hidden min-w-60 min-h-72 relative",
-                                            `bg-[url('https://img.freepik.com/foto-gratis/tranquila-puesta-sol-verano-sobre-silueta-montana-generada-ia_188544-19648.jpg')] bg-no-repeat bg-cover`,
-                                            index !== 0 &&
-                                                rotates[getRandomInt(8)]
-                                        )}
-                                    ></div>
-                                </Link>
-                            );
-                        })}
-                    </div>
+                    <ProjectsCarousel />
                 </div>
                 <div className="mt-12">
                     <h2 className="w-auto text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-300 hover:text-teal-600 dark:hover:text-teal-600 hover:underline">
                         <Link href="/articles">Articles</Link>
                     </h2>
                     <div className="py-10">
-                        <Articles />
+                        <Articles variant="compact" />
                     </div>
                 </div>
             </div>

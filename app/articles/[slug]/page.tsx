@@ -111,13 +111,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     <div className="z-10 text-sm font-normal text-zinc-400 dark:text-zinc-500 border-l-2 border-zinc-300   dark:border-zinc-500 pl-4 ">
                         {props.formattedDate}
                     </div>
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                    <h1 className="text-4xl m-0 font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                         {props.meta.title}
                     </h1>
                     <div className="relative border border-zinc-300 dark:border-zinc-800 italic font-normal text-zinc-400 rounded-sm py-3 px-3">
-                        <span className="absolute top-0 left-3 transform  -translate-y-1/2 bg-teal-500 dark:bg-teal-700  text-zinc-100 font-semibold border border-teal-500 dark:border-teal-400 rounded-sm px-1 py-0 text-xs">
+                        {/* <span className="absolute top-0 left-3 transform  -translate-y-1/2 bg-teal-500 dark:bg-teal-700  text-zinc-100 font-semibold border border-teal-500 dark:border-teal-400 rounded-sm px-1 py-0 text-xs">
                             Description
-                        </span>
+                        </span> */}
                         <p className="py-0 m-0 text-base text-zinc-800 dark:text-zinc-400">
                             {props.meta.description}
                         </p>
