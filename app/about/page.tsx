@@ -22,37 +22,29 @@ const Page: React.FC = () => {
                 </div>
                 <header className="max-w-2xl lg:order-first lg:row-span-2">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        I’m Willian David. I live in New York City, where I
-                        design the future.
+                        Soy Willian David. Vivo en Peru, donde dieño mi futuro.
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I’m Spencer, a software designer and entrepreneur based
-                        in New York City. I’m the founder and CEO of Planetaria,
-                        where we develop technologies that empower regular
-                        people to explore space on their own terms.
+                        Soy David, un desarrollador fullstack, aficionado por
+                        las bicicletas y una fascinacion por el mundo 3D, donde
+                        recientemente incursione en un nuevo pasatiempo aprender
+                        Blender.
                     </p>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        The only thing I loved more than computers as a kid was
-                        space. When I was 8, I climbed the 40-foot oak tree at
-                        the back of our yard while wearing my older sister’s
-                        motorcycle helmet, counted down from three, and jumped —
-                        hoping the tree was tall enough that with just a bit of
-                        momentum I’d be able to get to orbit.
-                    </p>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I spent the next few summers indoors working on a rocket
-                        design, while I recovered from the multiple surgeries it
-                        took to fix my badly broken legs. It took nine
-                        iterations, but when I was 15 I sent my dad’s Blackberry
-                        into orbit and was able to transmit a photo back down to
-                        our family computer from space.
-                    </p>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        Today, I’m the founder of Planetaria, where we’re
-                        working on civilian space suits and manned shuttle kits
-                        you can assemble at home so that the next generation of
-                        kids really can make it to orbit — from the comfort of
-                        their own backyards.{" "}
+                        Hace poco egrese como estudiante en Ingenieria de
+                        Sistemas de la{" "}
+                        <Link
+                            className="text-teal-600"
+                            href={"https://www.portal.unap.edu.pe/"}
+                        >
+                            UNAP
+                        </Link>{" "}
+                        , donde adquiri conocimientos fundamentales en
+                        programacion y desarrollo de software. Sin embargo hay
+                        tecnologias emocionantes que no te lo enseñan en el
+                        ambito universitario. Por lo tanto, me aventure a
+                        aprender de manera autodidacta sobre programacion web
+                        con Reactjs.
                     </p>
                 </header>
                 <div className="lg:pl-20">
