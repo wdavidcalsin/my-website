@@ -4,11 +4,13 @@ import React from "react";
 interface ChevronRightIconProps {
     className?: string;
     isWidth?: boolean;
+    onClick?: () => void;
 }
 
 const ChevronRightIcon: React.FC<ChevronRightIconProps> = ({
     className,
     isWidth = false,
+    onClick,
 }) => {
     return (
         <svg
@@ -22,6 +24,7 @@ const ChevronRightIcon: React.FC<ChevronRightIconProps> = ({
             strokeLinecap="round"
             strokeLinejoin="round"
             className={cn(!isWidth && "w-6 h-6", className)}
+            onClick={onClick}
         >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M9 6l6 6l-6 6" />
