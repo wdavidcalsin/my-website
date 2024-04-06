@@ -1,16 +1,13 @@
 import fs from "fs";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import path from "path";
-// import YouTube from "@/components/mdx/youtube";
-// import Code from "@/components/mdx/code-component/code";
 
 import { getArticle } from "@/app/services/articles";
-import { MDXComponents } from "mdx/types";
 import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
-import { HTMLAttributes } from "react";
 import Back from "./back";
-import Code from "./code";
+import { PreBlock } from "./code";
+
+import Markdown, { MarkdownToJSX } from "markdown-to-jsx";
 
 type Props = {
     params: { slug: string };
@@ -28,7 +25,6 @@ export async function generateMetadata(
     return {
         title: title,
         description: description,
-        // add other metadata fields as needed
     };
 }
 
@@ -44,63 +40,75 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { slug: string } }) {
     const props = await getArticle(params);
 
-    // console.log(props.meta);
-
-    const components: MDXComponents = {
-        pre: Code,
-        h1: (props: any) => <h1 {...props} className="text-2xl font-bold" />,
-        h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
-            <h2
-                {...props}
-                className="text-lg text-zinc-700  dark:text-zinc-200 mt-16 font-semibold"
-            />
-        ),
-        h3: (props: any) => (
-            <h3 {...props} className="text-lg text-zinc-200 mt-10 font-bold" />
-        ),
-        p: (props: any) => (
-            <p
-                {...props}
-                className="text-base my-4 text-zinc-700 dark:text-zinc-400 leading-9"
-            />
-        ),
-        a: (props: any) => (
-            <a
-                {...props}
-                className="text-teal-600 font-bold hover:underline dark:text-teal-400"
-            />
-        ),
-        li: (props: any) => (
-            <li
-                {...props}
-                className="text-base text-zinc-700 dark:text-zinc-400 my-2"
-            />
-        ),
-        ul: (props: any) => (
-            <ul
-                {...props}
-                className="text-base text-zinc-700 dark:text-zinc-400 my-4"
-            />
-        ),
-        ol: (props: any) => (
-            <ol
-                {...props}
-                className="text-base text-zinc-700 dark:text-zinc-400 my-4"
-            />
-        ),
-        img: (props: any) => (
-            <Image
-                width={600}
-                height={400}
-                className="rounded-lg shadow-sm w-full h-auto"
-                {...props}
-                alt=""
-                // quality={100}
-            />
-        ),
-
-        // h2: (props: any) => <h2 {...props} className="text-2xl font-bold" />,
-        // YouTube,
+    const options: MarkdownToJSX.Options = {
+        overrides: {
+            img: {
+                component: Image,
+                props: {
+                    width: 600,
+                    height: 400,
+                    className: "rounded-lg shadow-sm w-full h-auto",
+                },
+            },
+            p: {
+                component: "p",
+                props: {
+                    className:
+                        "text-base my-4 text-zinc-700 dark:text-zinc-400 leading-9",
+                },
+            },
+            h1: {
+                component: "h1",
+                props: {
+                    className: "text-2xl font-bold",
+                },
+            },
+            h2: {
+                component: "h2",
+                props: {
+                    className:
+                        "text-lg text-zinc-700 dark:text-zinc-200 mt-16 font-semibold",
+                },
+            },
+            h3: {
+                component: "h3",
+                props: {
+                    className: "text-lg text-zinc-200 mt-10 font-bold",
+                },
+            },
+            pre: {
+                component: PreBlock,
+                props: {},
+            },
+            ul: {
+                component: "ul",
+                props: {
+                    className:
+                        "text-base text-zinc-700 dark:text-zinc-400 my-4",
+                },
+            },
+            ol: {
+                component: "ol",
+                props: {
+                    className:
+                        "text-base text-zinc-700 dark:text-zinc-400 my-4",
+                },
+            },
+            li: {
+                component: "li",
+                props: {
+                    className:
+                        "text-base text-zinc-700 dark:text-zinc-400 my-2",
+                },
+            },
+            a: {
+                component: "a",
+                props: {
+                    className:
+                        "text-teal-600 font-bold hover:underline dark:text-teal-400",
+                },
+            },
+        },
     };
 
     return (
@@ -124,7 +132,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         </p>
                     </div>
                 </div>
-                <MDXRemote source={props.content} components={components} />
+
+                <Markdown options={options}>{props.content}</Markdown>
             </article>
         </div>
     );

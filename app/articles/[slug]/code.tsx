@@ -12,7 +12,27 @@ import {
 import style from "../../css-module/code-format-mdx.module.css";
 import AdminBar from "./admin-bar";
 
-const Code = (props: any) => {
+export const PreBlock = ({
+    children,
+    ...rest
+}: {
+    children: React.ReactElement | React.ReactElement[];
+}) => {
+    if ("type" in children && children["type"] === "code") {
+        return Code(children["props"]);
+    }
+    return <pre {...rest}>{children}</pre>;
+};
+
+const Code = ({
+    className,
+    children,
+}: {
+    className: string;
+    children: string;
+}) => {
+    let lang = "text";
+
     const { resolvedTheme } = useTheme();
     const [isDark, setIsDark] = React.useState<boolean>(false);
     const [isLoading, setIsLoading] = React.useState<boolean>(true);
@@ -24,14 +44,6 @@ const Code = (props: any) => {
         }
     }, [resolvedTheme]);
 
-    const codeContent =
-        typeof props.children === "string"
-            ? props.children
-            : props.children.props.children;
-    const className = props.children.props.className || "";
-    const matches = className.match(/language-(?<lang>.*)/);
-    const language = matches?.groups?.lang || "";
-
     if (isLoading) {
         return (
             <div className="flex justify-center items-center">
@@ -41,23 +53,28 @@ const Code = (props: any) => {
         );
     }
 
+    if (className && className.startsWith("lang-")) {
+        lang = className.replace("lang-", "");
+    }
+
     return (
         <div className="text-sm flex flex-col gap-0 ">
-            <AdminBar code={codeContent} language={language} />
+            <AdminBar code={children} language={lang} />
             <SyntaxHighlighter
-                language={language}
-                // className={cn(
-                //     "rounded-lg bg-zinc-900 border border-zinc-300 dark:border-zinc-800",
-                //     isDark ? style.code_format_dark : style.code_format_light
-                // )}
-                // customStyle={{
-                //     background: isDark ? "transparent" : "#FAFAFA",
-                // }}
+                language={lang}
+                className={cn(
+                    "rounded-lg bg-zinc-900 border border-zinc-300 dark:border-zinc-800",
+                    isDark ? style.code_format_dark : style.code_format_light
+                )}
+                customStyle={{
+                    background: isDark ? "transparent" : "#FAFAFA",
+                }}
                 style={isDark ? oneDark : materialLight}
+                // style={oneDark}
                 wrapLines={true}
                 showLineNumbers={true}
             >
-                {codeContent}
+                {children}
             </SyntaxHighlighter>
         </div>
     );
