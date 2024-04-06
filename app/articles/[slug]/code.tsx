@@ -46,13 +46,13 @@ const Code = (props: any) => {
             <AdminBar code={codeContent} language={language} />
             <SyntaxHighlighter
                 language={language}
-                className={cn(
-                    "rounded-lg bg-zinc-900 border border-zinc-300 dark:border-zinc-800",
-                    isDark ? style.code_format_dark : style.code_format_light
-                )}
-                customStyle={{
-                    background: isDark ? "transparent" : "#FAFAFA",
-                }}
+                // className={cn(
+                //     "rounded-lg bg-zinc-900 border border-zinc-300 dark:border-zinc-800",
+                //     isDark ? style.code_format_dark : style.code_format_light
+                // )}
+                // customStyle={{
+                //     background: isDark ? "transparent" : "#FAFAFA",
+                // }}
                 style={isDark ? oneDark : materialLight}
                 wrapLines={true}
                 showLineNumbers={true}

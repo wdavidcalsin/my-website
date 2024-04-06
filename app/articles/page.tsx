@@ -3,7 +3,17 @@ import Articles from "./articles";
 
 interface PageProps {}
 
-const Page: React.FC<PageProps> = () => {
+async function getArticles() {
+    const response = await fetch(`${process.env.BASE_API_URL}/api/articles`, {
+        method: "GET",
+    });
+    console.log(__dirname);
+    return response.json();
+}
+
+const Page: React.FC<PageProps> = async () => {
+    const { articles } = await getArticles();
+
     return (
         <div>
             <section className="flex flex-col gap-16">
@@ -18,7 +28,7 @@ const Page: React.FC<PageProps> = () => {
                         order.
                     </p>
                 </header>
-                <Articles />
+                <Articles articles={articles} />
             </section>
         </div>
     );

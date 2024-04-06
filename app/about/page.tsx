@@ -16,7 +16,7 @@ const Page: React.FC = () => {
                             width="800"
                             height="800"
                             className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-                            src="/images/about-image.webp"
+                            src="/images/mtb.webp"
                         />
                     </div>
                 </div>

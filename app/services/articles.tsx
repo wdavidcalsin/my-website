@@ -12,7 +12,13 @@ export interface Post {
 
 const PATH_MDX = "articles";
 
-export function getArticles() {
+export function getArticles(): {
+    slug: string;
+    formattedDate: string;
+    meta: {
+        [key: string]: any;
+    };
+}[] {
     const blogDirectory = path.join(process.cwd(), PATH_MDX);
     const fileNames = fs.readdirSync(blogDirectory);
 

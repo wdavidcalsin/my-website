@@ -37,7 +37,7 @@ const ProjectCoverCard: React.FC<ProjectCoverCardProps> = ({
             <div
                 className={cn(
                     "relative transition-all rounded-2xl overflow-hidden  min-h-72 ",
-                    `bg-[url('https://img.freepik.com/foto-gratis/tranquila-puesta-sol-verano-sobre-silueta-montana-generada-ia_188544-19648.jpg')] bg-no-repeat bg-cover`
+                    `bg-[url('/images/puesta-del-sol.webp')] bg-no-repeat bg-cover`
                 )}
                 onMouseOver={(e) => handleOnMouseOver(e)}
                 onMouseLeave={(e) => handleOnMouseLeave(e)}

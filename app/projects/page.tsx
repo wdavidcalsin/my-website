@@ -4,23 +4,29 @@ import { listOfProjects } from "../constants/projects";
 
 interface PageProps {}
 
-const Page: React.FC<PageProps> = () => {
+async function getProjects() {
+    const response = await fetch(`${process.env.BASE_API_URL}/api/projects`, {
+        method: "GET",
+    });
+    return response.json();
+}
+
+const Page: React.FC<PageProps> = async () => {
+    const { projects } = await getProjects();
     return (
         <main>
             <div>
                 <header className="max-w-2xl">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        Things I’ve made trying to put my dent in the universe.
+                        Cosas que he hecho para mostrar mi trabajo
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I’ve worked on tons of little projects over the years
-                        but these are the ones that I’m most proud of. Many of
-                        them are open-source, so if you see something that
-                        piques your interest, check out the code and contribute
-                        if you have ideas for how it can be improved.
+                        Hey trabajado en diferentes proyectos personales, que me
+                        permitieron descubrir tecnologias y algunas maneras de
+                        desarrollar software, aqui algunos de ellos:
                     </p>
                 </header>
-                <ProjectsSection projects={listOfProjects} />
+                <ProjectsSection projects={projects} />
             </div>
         </main>
     );

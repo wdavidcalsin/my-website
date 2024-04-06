@@ -3,7 +3,7 @@ import InstagramIcon from "../components/icons/instagram-icon";
 import LinkedInIcon from "../components/icons/linkedin-icon";
 import XIcon from "../components/icons/x-icon";
 
-interface ISocialNetworks {
+export interface ISocialNetworks {
     title?: string;
     href: string;
     children: React.ReactNode;
@@ -12,17 +12,12 @@ interface ISocialNetworks {
 export const socialNetworks: ISocialNetworks[] = [
     {
         title: "X",
-        href: "",
+        href: "https://twitter.com/wdavidcalsin",
         children: <XIcon />,
     },
-    // {
-    //     title: "Instagram",
-    //     href: "",
-    //     children: <InstagramIcon />,
-    // },
     {
         title: "GitHub",
-        href: "",
+        href: "https://github.com/wdavidcalsin",
         children: <GitHubIcon />,
     },
     {

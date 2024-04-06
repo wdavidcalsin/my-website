@@ -1,15 +1,22 @@
-import React from "react";
-import { getArticles } from "../services/articles";
-import ArticleCard from "./article-card";
 import { cn } from "@/lib/utils";
+import React from "react";
+import ArticleCard from "./article-card";
 
 interface ArticlesProps {
+    articles: {
+        slug: string;
+        formattedDate: string;
+        meta: {
+            [key: string]: any;
+        };
+    }[];
     variant?: "default" | "compact";
 }
 
-const Articles: React.FC<ArticlesProps> = ({ variant = "default" }) => {
-    const articles = getArticles();
-
+const Articles: React.FC<ArticlesProps> = ({
+    variant = "default",
+    articles,
+}) => {
     return (
         <ul
             className={cn(

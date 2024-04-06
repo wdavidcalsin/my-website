@@ -5,11 +5,12 @@ import path from "path";
 // import Code from "@/components/mdx/code-component/code";
 
 import { getArticle } from "@/app/services/articles";
+import { MDXComponents } from "mdx/types";
 import type { Metadata, ResolvingMetadata } from "next";
-import Code from "./code";
-import ChevronLeftIcon from "@/app/components/icons/chevron-left-icon";
-import Back from "./back";
 import Image from "next/image";
+import { HTMLAttributes } from "react";
+import Back from "./back";
+import Code from "./code";
 
 type Props = {
     params: { slug: string };
@@ -45,10 +46,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     // console.log(props.meta);
 
-    const components = {
+    const components: MDXComponents = {
         pre: Code,
         h1: (props: any) => <h1 {...props} className="text-2xl font-bold" />,
-        h2: (props: any) => (
+        h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
             <h2
                 {...props}
                 className="text-lg text-zinc-700  dark:text-zinc-200 mt-16 font-semibold"

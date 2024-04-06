@@ -8,6 +8,7 @@ import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-provider";
 import { useScroll } from "react-use";
+import { cn } from "@/lib/utils";
 
 // const inter = Inter({ subsets: ["latin"] });
 

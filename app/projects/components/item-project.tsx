@@ -18,7 +18,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                 <Image
                     width={30}
                     height={30}
-                    src={"/images/sample-icons.svg"}
+                    src={"/images/sample-icons.webp"}
                     alt=""
                 />
             </div>

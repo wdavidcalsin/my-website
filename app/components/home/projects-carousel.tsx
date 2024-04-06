@@ -1,18 +1,19 @@
 "use client";
 
-import * as React from "react";
-import ProjectCoverCard from "./project-cover-card";
-import { listOfProjects } from "@/app/constants/projects";
+import { IProject } from "@/app/types/project";
 import { cn } from "@/lib/utils";
-import styles from "../../css-module/home-page.module.css";
-import "react-multi-carousel/lib/styles.css";
-import { Button } from "@/components/ui/button";
-import ChevronRightIcon from "../icons/chevron-right-icon";
-import ChevronLeftIcon from "../icons/chevron-left-icon";
-import Carousel, { ArrowProps, ResponsiveType } from "react-multi-carousel";
 import Link from "next/link";
+import * as React from "react";
+import Carousel, { ArrowProps, ResponsiveType } from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import styles from "../../css-module/home-page.module.css";
+import ChevronLeftIcon from "../icons/chevron-left-icon";
+import ChevronRightIcon from "../icons/chevron-right-icon";
+import ProjectCoverCard from "./project-cover-card";
 
-interface ProjectsCarousel {}
+interface ProjectsCarousel {
+    projects: IProject[];
+}
 
 const responsive: ResponsiveType = {
     superLargeDesktop: {
@@ -50,7 +51,7 @@ const LinkMoreProjects = () => {
     );
 };
 
-const ProjectsCarousel: React.FC<ProjectsCarousel> = () => {
+const ProjectsCarousel: React.FC<ProjectsCarousel> = ({ projects }) => {
     const CustomRight = ({ onClick }: ArrowProps) => (
         <ChevronRightIcon
             onClick={onClick}
@@ -85,7 +86,7 @@ const ProjectsCarousel: React.FC<ProjectsCarousel> = () => {
                 slidesToSlide={1}
                 swipeable
             >
-                {listOfProjects.slice(0, 4).map((item, index) => {
+                {projects.slice(0, 4).map((item, index) => {
                     return (
                         <ProjectCoverCard
                             key={index}
