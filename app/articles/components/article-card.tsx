@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ChevronRightIcon from "../components/icons/chevron-right-icon";
+import ChevronRightIcon from "../../components/icons/chevron-right-icon";
 import { cn } from "@/lib/utils";
 
 interface IArticle {

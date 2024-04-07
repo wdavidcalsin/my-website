@@ -4,8 +4,8 @@ import path from "path";
 import { getArticle } from "@/app/services/articles";
 import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
-import Back from "./back";
-import { PreBlock } from "./code";
+import Back from "./components/back";
+import PreBlock from "./components/code";
 
 import Markdown, { MarkdownToJSX } from "markdown-to-jsx";
 

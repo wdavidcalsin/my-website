@@ -2,27 +2,27 @@ import { IProject } from "../types/project";
 
 export const listOfProjects: IProject[] = [
     {
-        title: "Project 1",
+        title: "Dictionary Sandy",
         description:
-            "Planetaria Creating technology to empower civilians to explore space on their own terms",
-        githubLink: "#",
-        previewLink: "#",
-        logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+            "Una plataforma de web scraping que permite a los usuarios buscar y aprender palabras en español de manera eficiente. Los datos se recopilan de varias fuentes confiables para proporcionar la información más precisa y actualizada.",
+        githubLink: "https://github.com/wdavidcalsin/dictionary",
+        previewLink: "https://dictionary-sandy.vercel.app/",
+        logo: "/images/projects/icon-dictionary-sandy-2.png",
+        coverImage: "/images/projects/cover-image-dictionary-sandy.png",
     },
     {
         title: "Project 2",
         description: "Description of the project 2",
         previewLink: "#",
         logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+        coverImage: "/images/puesta-del-sol.webp",
     },
     {
         title: "Project 3",
         description: "Description of the project 3",
         githubLink: "#",
         logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+        coverImage: "/images/puesta-del-sol.webp",
     },
     {
         title: "Project 4",
@@ -30,7 +30,7 @@ export const listOfProjects: IProject[] = [
         githubLink: "#",
         previewLink: "#",
         logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+        coverImage: "/images/puesta-del-sol.webp",
     },
     {
         title: "Project 5",
@@ -38,7 +38,7 @@ export const listOfProjects: IProject[] = [
         githubLink: "#",
         previewLink: "#",
         logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+        coverImage: "/images/puesta-del-sol.webp",
     },
     {
         title: "Project 6",
@@ -46,7 +46,7 @@ export const listOfProjects: IProject[] = [
         githubLink: "#",
         previewLink: "#",
         logo: "/images/sample-icons.svg",
-        coverImage: "/images/project-1.webp",
+        coverImage: "/images/puesta-del-sol.webp",
     },
 ];
 

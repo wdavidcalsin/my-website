@@ -9,10 +9,10 @@ import {
     materialLight,
     oneDark,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import style from "../../css-module/code-format-mdx.module.css";
+import style from "../../../css-module/code-format-mdx.module.css";
 import AdminBar from "./admin-bar";
 
-export const PreBlock = ({
+const PreBlock = ({
     children,
     ...rest
 }: {
@@ -23,6 +23,8 @@ export const PreBlock = ({
     }
     return <pre {...rest}>{children}</pre>;
 };
+
+export default PreBlock;
 
 const Code = ({
     className,
@@ -79,5 +81,3 @@ const Code = ({
         </div>
     );
 };
-
-export default Code;

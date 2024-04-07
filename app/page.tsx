@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { socialNetworks } from "./constants/social-networks";
 
-import Articles from "./articles/articles";
+import Articles from "./articles/components/articles";
 import ProjectsCarousel from "./components/home/projects-carousel";
 
 async function getProjects() {
