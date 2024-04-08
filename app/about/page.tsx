@@ -22,29 +22,28 @@ const Page: React.FC = () => {
                 </div>
                 <header className="max-w-2xl lg:order-first lg:row-span-2">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        Soy Willian David. Vivo en Peru, donde dieño mi futuro.
+                        I&apos;m Willian David. I live in Peru, where I design
+                        my future.
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        Soy David, un desarrollador fullstack, aficionado por
-                        las bicicletas y una fascinacion por el mundo 3D, donde
-                        recientemente incursione en un nuevo pasatiempo aprender
-                        Blender.
+                        I&apos;m David, a fullstack developer, passionate about
+                        bicycles, and fascinated by the 3D world, where I
+                        recently ventured into a new hobby of learning Blender.
                     </p>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        Hace poco egrese como estudiante en Ingenieria de
-                        Sistemas de la{" "}
+                        Recently, I graduated as a student in Systems
+                        Engineering at
                         <Link
                             className="text-teal-600"
                             href={"https://www.portal.unap.edu.pe/"}
                         >
                             UNAP
                         </Link>{" "}
-                        , donde adquiri conocimientos fundamentales en
-                        programacion y desarrollo de software. Sin embargo hay
-                        tecnologias emocionantes que no te lo enseñan en el
-                        ambito universitario. Por lo tanto, me aventure a
-                        aprender de manera autodidacta sobre programacion web
-                        con Reactjs.
+                        , where I acquired fundamental knowledge in programming
+                        and software development. However, there are exciting
+                        technologies that you don&apos;t learn in the university
+                        environment. Therefore, I ventured into self-learning
+                        about web programming with Reactjs.
                     </p>
                 </header>
                 <div className="lg:pl-20">
