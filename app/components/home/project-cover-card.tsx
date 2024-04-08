@@ -41,6 +41,11 @@ const ProjectCoverCard: React.FC<ProjectCoverCardProps> = ({
                         project.coverImage || "/images/puesta-del-sol.webp"
                     })] bg-no-repeat bg-cover`
                 )}
+                style={{
+                    backgroundImage: `url(${
+                        project.coverImage || "/images/puesta-del-sol.webp"
+                    })`,
+                }}
                 onMouseOver={(e) => handleOnMouseOver(e)}
                 onMouseLeave={(e) => handleOnMouseLeave(e)}
             >
@@ -53,7 +58,7 @@ const ProjectCoverCard: React.FC<ProjectCoverCardProps> = ({
                     <div className=" flex gap-3 p-2 text-white dark:text-zinc-300">
                         {githubLink && (
                             <Link href={githubLink} target="_blank">
-                                <div className="transition-all bg-zinc-800/60 p-1 rounded-md  hover:scale-110">
+                                <div className="transition-all bg-zinc-950/80 p-1 rounded-md  hover:scale-110">
                                     <GitHubIcon
                                         className="h-5 w-5"
                                         isWidth={true}
@@ -63,7 +68,7 @@ const ProjectCoverCard: React.FC<ProjectCoverCardProps> = ({
                         )}
                         {previewLink && (
                             <Link href={previewLink} target="_blank">
-                                <div className="transition-all bg-zinc-800/60 p-1 rounded-md  hover:scale-110">
+                                <div className="transition-all bg-zinc-950/80 p-1 rounded-md  hover:scale-110">
                                     <LinkIcon
                                         className="h-5 w-5"
                                         isWidth={true}

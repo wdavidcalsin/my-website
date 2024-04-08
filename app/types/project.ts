@@ -5,4 +5,5 @@ export interface IProject {
     previewLink?: string;
     logo?: string;
     coverImage?: string;
+    createdAt: string;
 }
