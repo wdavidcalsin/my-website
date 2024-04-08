@@ -4,24 +4,12 @@ import { socialNetworks } from "./constants/social-networks";
 
 import Articles from "./articles/components/articles";
 import ProjectsCarousel from "./components/home/projects-carousel";
+import { getProjects } from "./services/projects";
+import { getArticles } from "./services/articles";
 
-async function getProjects() {
-    const response = await fetch(`${process.env.BASE_API_URL}/api/projects`, {
-        method: "GET",
-    });
-    return response.json();
-}
-
-async function getArticles() {
-    const response = await fetch(`${process.env.BASE_API_URL}/api/articles`, {
-        method: "GET",
-    });
-    return response.json();
-}
-
-async function Page() {
-    const { projects } = await getProjects();
-    const { articles } = await getArticles();
+const Page = async () => {
+    const projects = await getProjects();
+    const articles = await getArticles();
 
     return (
         <main className="">
@@ -75,6 +63,6 @@ async function Page() {
             </div>
         </main>
     );
-}
+};
 
 export default Page;

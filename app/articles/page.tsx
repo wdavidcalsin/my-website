@@ -1,18 +1,11 @@
 import React from "react";
 import Articles from "./components/articles";
+import { getArticles } from "../services/articles";
 
 interface PageProps {}
 
-async function getArticles() {
-    const response = await fetch(`${process.env.BASE_API_URL}/api/articles`, {
-        method: "GET",
-    });
-    console.log(__dirname);
-    return response.json();
-}
-
 const Page: React.FC<PageProps> = async () => {
-    const { articles } = await getArticles();
+    const articles = await getArticles();
 
     return (
         <div>

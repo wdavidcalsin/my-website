@@ -1,8 +1,6 @@
-import { listOfProjects } from "@/app/constants/projects";
-import { create } from "domain";
-import { NextResponse } from "next/server";
+import { listOfProjects } from "../constants/projects";
 
-export async function GET(request: Request, context: any) {
+export const getProjects = () => {
     const projects = listOfProjects.map((project) => {
         const date = new Date(project.createdAt);
 
@@ -25,7 +23,5 @@ export async function GET(request: Request, context: any) {
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
 
-    return NextResponse.json({
-        projects: resultProjects,
-    });
-}
+    return resultProjects;
+};

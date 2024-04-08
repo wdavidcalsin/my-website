@@ -1,18 +1,13 @@
 import React from "react";
 import ProjectsSection from "./components/projects-section";
 import { listOfProjects } from "../constants/projects";
+import { getProjects } from "../services/projects";
 
 interface PageProps {}
 
-async function getProjects() {
-    const response = await fetch(`${process.env.BASE_API_URL}/api/projects`, {
-        method: "GET",
-    });
-    return response.json();
-}
-
 const Page: React.FC<PageProps> = async () => {
-    const { projects } = await getProjects();
+    const projects = await getProjects();
+
     return (
         <main>
             <div>
