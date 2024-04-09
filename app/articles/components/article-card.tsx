@@ -41,7 +41,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, variant }) => {
                                 <span>{article.meta.title}</span>
                             </h2>
 
-                            <p className="font-normal text-sm text-zinc-500">
+                            <p className="font-normal text-sm text-zinc-500 line-clamp-3">
                                 {article.meta.description}
                             </p>
                         </div>

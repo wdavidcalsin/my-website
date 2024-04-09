@@ -24,7 +24,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Instagram UI Clone",
-        description: "Description of the project 3",
+
         githubLink: "https://github.com/wdavidcalsin/instagram-clone",
         previewLink: "https://instagram-clone-gamma-two.vercel.app/",
         logo: `${BASE_PATH}/icon-instagram-ui-clone.webp`,
@@ -33,7 +33,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "MUI Theme Pack",
-        description: "Description of the project 4",
+
         githubLink: "https://github.com/wdavidcalsin/mui-theme-pack",
         previewLink: "https://www.npmjs.com/package/mui-theme-pack",
         logo: `${BASE_PATH}/icon-mui-theme-pack.webp`,
@@ -42,7 +42,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Image Search",
-        description: "Description of the project 5",
+
         githubLink: "https://github.com/wdavidcalsin/image-searcher",
         previewLink: "https://image-searcher-wdavid.vercel.app/",
         logo: `${BASE_PATH}/icon-image-search.webp`,
@@ -51,7 +51,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Commit Genius",
-        description: "Description of the project 6",
+
         githubLink: "https://github.com/wdavidcalsin/commit-genius",
         previewLink: "https://commit-genius.vercel.app/",
         logo: `${BASE_PATH}/icon-commit-genius.webp`,
@@ -60,7 +60,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Code Xplain",
-        description: "Description of the project 6",
+
         githubLink: "https://github.com/wdavidcalsin/code-xplain",
         logo: `${BASE_PATH}/icon-code-xplain.webp`,
         coverImage: `${BASE_PATH}/cover-image-code-xplain.webp`,
@@ -68,7 +68,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Weather Forecast",
-        description: "Description of the project 6",
+
         githubLink: "https://github.com/wdavidcalsin/weather-forecast",
         previewLink: "https://weather-forecast-two-kappa.vercel.app/",
         logo: `${BASE_PATH}/icon-weather-forecast.webp`,
@@ -77,7 +77,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Blender Xplorer",
-        description: "Description of the project 6",
+
         githubLink: "https://github.com/wdavidcalsin/blender-xplorer",
         previewLink: "https://blender-xplorer.vercel.app/",
         logo: `${BASE_PATH}/icon-blender-xplorer.webp`,
@@ -86,7 +86,7 @@ export const listOfProjects: IProject[] = [
     },
     {
         title: "Bici Benchmark",
-        description: "Description of the project 6",
+
         githubLink: "https://github.com/wdavidcalsin/bici-benchmark",
         previewLink: "https://bici-benchmark.vercel.app/",
         logo: `${BASE_PATH}/icon-bici-benchmark.webp`,

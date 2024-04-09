@@ -15,7 +15,7 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
         <div className="group relative flex flex-col gap-6 items-start ">
             <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
             <div className="relative z-10">
-                {/* <Image
+                <Image
                     width={30}
                     height={30}
                     src={project.logo || "/images/sample-icons.svg"}
@@ -25,13 +25,13 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                     // layout="fill"
                     objectFit="cover"
                     objectPosition="center"
-                /> */}
-                <img
+                />
+                {/* <img
                     width={30}
                     height={30}
                     src={project.logo || "/images/sample-icons.svg"}
                     alt=""
-                />
+                /> */}
             </div>
             <div className="relative z-10 flex flex-col gap-3">
                 <h2 className="font-semibold text-zinc-900 dark:text-zinc-200">
@@ -39,7 +39,9 @@ const ItemProject: React.FC<ItemProjectProps> = ({ project }) => {
                 </h2>
 
                 <p className="font-normal text-sm text-zinc-500">
-                    {description}
+                    {description
+                        ? description
+                        : "The description for this project will be added soon."}
                 </p>
             </div>
             {(githubLink || previewLink) && (

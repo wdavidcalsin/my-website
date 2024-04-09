@@ -1,0 +1,78 @@
+---
+title: "Tips y trucos de useffect para mejorar el performance"
+date: "2024-04-08"
+description: "El hook useEffect se destaca por su capacidad para gestionar los efectos secundarios, como la obtencion de datos y la escucha de eventos y temporizadores. Sin embargo como cualquier otra herramienta poderosa, hay ciertas practicas y trampas que se denen evitar al usar useEffect, por lo tanto en este articulo mostraremos las mejores maneras de utilizar useEffect correctamente y evitar errores comunes que pueden provocar perdidas de memoria, bajo rendimiento y otros incovenientes."
+---
+
+## Incluir todas la dependencias
+
+En useEffect, el array de dependencias indica cuando reactivar el efecto y cuando limpiarlo, por lo tanto se deberia asegurar de incluir todas las dependencias necesarias para evitar ejecuciones innecesarias y problemas de rendimiento.
+
+**_Por ejemplo_**
+
+```javascript
+import * as React from "react";
+
+function MyComponent({ id }) {
+    const [data, setData] = React.useState(null);
+
+    React.useEffect(() => {
+        fetch(`https://my-api.com/data/${id}`)
+            .then((response) => response.json())
+            .then((data) => setData(data));
+    }, [id]); // solo volver a ejecutar el efecto si id cambia
+}
+```
+
+## Utilizar funciones de limpieza
+
+El hook useEffect ofrece una funcion de limpieza que se ejecuta cuando el componente se desmonta o cuando se reactiva el efecto. Esto es util para liberal recursos como temporizadores o escuchadores de eventos, evitando problemas como fugas de memoria.
+
+**_Por ejemplo_**
+
+```javascript
+import * as React from "react";
+
+function MyComponent({ id }) {
+    const [data, setData] = React.useState(null);
+
+    React.useEffect(() => {
+        let didCancel = false;
+        async function fetchData() {
+            try {
+                const response = await fetch(`https://my-api.com/data/${id}`);
+                if (!didCancel) {
+                    const json = await response.json();
+                    setData(json);
+                }
+            } catch (error) {
+                if (!didCancel) {
+                    console.error(error);
+                }
+            }
+        }
+        fetchData();
+
+        // Funcion de limpieza
+        return () => {
+            didCancel = true;
+        };
+    }, [id]);
+
+    // incluye el id como dependencia para que el useEffect solo se ejecute cuando el id cambie
+    // si no se incluye el id como dependencia, el efecto se ejecutara en cada renderizacion
+    // lo que provocara repeticiones innecesarias y un bajo rendimiento
+
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
+    return <div>{data}</div>;
+}
+```
+
+### Explicación
+
+En este ejemplo, usamos una variable llamada didCancel que establecemos en true en la función de limpieza, esta variable se comprueba antes de establecer el estado y antes de lanzar un error. De esta manera, se puede cancelar cualquier solicitud de red en curso cuando el componente se desmonta o se vuelve a ejecutar el efecto. Esto ayuda a prevenir posibles problemas como fugas de memoria.
+
+Las funciones de limpieza son esenciales para realizar efectos secundarios en los componentes, ya que permiten limpiar recursos utilizados, como las solicitudes de red. La cancelación de solicitudes en curso es crucial para evitar problemas cuando un componente se desmonta o se vuelve a ejecutar el efecto.
