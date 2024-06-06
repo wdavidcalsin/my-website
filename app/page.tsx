@@ -27,8 +27,8 @@ const Page = async () => {
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                         Fullstack programmer and bike enthusiast.
                     </h1>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I&#39;m David, a full stack programmer, and I love
+                    <p className="mt-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+                        I&#39;m <span className="font-bold">David</span>, I love
                         working with React, I&#39;m also passionate about riding
                         bicycles.
                     </p>
